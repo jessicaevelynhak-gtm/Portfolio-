@@ -1,1916 +1,1220 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — GTM Operator · Sales Strategist · Founder</title>
-<link href="https://fonts.googleapis.com/css2?family=Canela+Deck:ital,wght@0,300;0,400;1,300;1,400&family=Editorial+New:ital@0;1&family=Editorial+New+Ultralight:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<title>Jessica Evelyn Hak — Founder · GTM Operator · Sales Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   DESIGN TOKENS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   TOKENS
+━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --void:    #0A0806;
-  --ink:     #16120E;
-  --ink-60:  rgba(22,18,14,.6);
-  --ink-20:  rgba(22,18,14,.12);
-  --ink-08:  rgba(22,18,14,.05);
-  --paper:   #FDFAF5;
-  --warm:    #F5EDE0;
-  --warm2:   #EAE0CE;
-  --dust:    #DDD0BC;
-  --rose:    #C06858;
-  --rose-l:  #EABDAA;
-  --rose-bg: rgba(192,104,88,.07);
-  --gold:    #B88832;
-  --gold-l:  #E8D090;
-  --gold-bg: rgba(184,136,50,.07);
-  --sage:    #5C8C64;
-  --sage-l:  #AECAB4;
-  --sage-bg: rgba(92,140,100,.07);
-  --teal:    #3A7878;
-  --slate:   #3C4858;
-  --mist:    #7A8898;
-  --white:   #FFFFFF;
-  --r: 12px;
-  --r-lg: 20px;
-}
-
-*,*::before,*::after { margin:0;padding:0;box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-
-body {
-font-family:‘DM Sans’,sans-serif;
-background:var(–paper);
-color:var(–ink);
-font-size:14px;
-line-height:1.65;
-cursor:default;
-}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-NAV
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-nav {
-position:fixed;
-top:0;left:0;right:0;
-height:52px;
-background:rgba(253,250,245,.92);
-backdrop-filter:blur(20px);
-border-bottom:1px solid var(–ink-20);
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 48px;
-z-index:100;
-}
-
-.nav-name {
-font-family:‘Fraunces’,serif;
-font-size:15px;
-font-weight:300;
-color:var(–ink);
-letter-spacing:.02em;
-}
-
-.nav-links {
-display:flex;
-gap:4px;
-list-style:none;
-}
-
-.nav-links a {
-text-decoration:none;
-font-size:11px;
-font-weight:500;
-letter-spacing:.08em;
-text-transform:uppercase;
-color:var(–mist);
-padding:5px 10px;
-border-radius:6px;
-transition:all .18s;
-}
-
-.nav-links a:hover { color:var(–ink); background:var(–warm); }
-
-.nav-cta {
-padding:7px 16px !important;
-background:var(–ink) !important;
-color:var(–paper) !important;
-border-radius:20px !important;
-}
-
-.nav-cta:hover { background:var(–rose) !important; color:#fff !important; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-HERO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-#home {
-min-height:100vh;
-display:flex;
-align-items:center;
-padding:100px 72px 80px;
-position:relative;
-overflow:hidden;
-background:var(–void);
-}
-
-.hero-bg-text {
-position:absolute;
-bottom:-60px;
-right:-40px;
-font-family:‘Fraunces’,serif;
-font-size:clamp(160px,22vw,280px);
-font-weight:300;
-color:rgba(255,255,255,.025);
-line-height:1;
-pointer-events:none;
-user-select:none;
-letter-spacing:-.02em;
-}
-
-.hero-grain {
-position:absolute;
-inset:0;
-background-image:url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 256 256’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘n’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.9’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23n)’ opacity=‘0.04’/%3E%3C/svg%3E”);
-opacity:.4;
-pointer-events:none;
-}
-
-.hero-content {
-position:relative;
-z-index:1;
-max-width:1200px;
-width:100%;
-margin:0 auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.hero-left {}
-
-.hero-eyebrow {
-display:inline-flex;
-align-items:center;
-gap:8px;
-font-size:10px;
-letter-spacing:.22em;
-text-transform:uppercase;
-color:rgba(255,255,255,.4);
-font-weight:600;
-margin-bottom:24px;
-}
-
-.hero-eyebrow::before {
-content:’’;
-width:20px;height:1px;
-background:var(–gold);
-}
-
-.hero-title {
-font-family:‘Fraunces’,serif;
-font-size:clamp(48px,6vw,78px);
-color:#fff;
-line-height:1.0;
-font-weight:300;
-margin-bottom:20px;
-letter-spacing:-.01em;
-}
-
-.hero-title em {
-font-style:italic;
-color:var(–rose-l);
-}
-
-.hero-sub {
-font-size:15px;
-color:rgba(255,255,255,.5);
-line-height:1.7;
-max-width:440px;
-margin-bottom:32px;
-}
-
-.hero-roles {
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin-bottom:36px;
-}
-
-.role-tag {
-padding:5px 13px;
-border-radius:20px;
-font-size:10px;
-font-weight:600;
-letter-spacing:.06em;
-border:1px solid;
-}
-
-.rt-r { border-color:rgba(192,104,88,.4); color:var(–rose-l); background:rgba(192,104,88,.1); }
-.rt-g { border-color:rgba(184,136,50,.4); color:var(–gold-l); background:rgba(184,136,50,.1); }
-.rt-s { border-color:rgba(92,140,100,.4); color:var(–sage-l); background:rgba(92,140,100,.1); }
-.rt-n { border-color:rgba(255,255,255,.18); color:rgba(255,255,255,.55); background:rgba(255,255,255,.06); }
-
-.hero-taglines {
-display:flex;
-flex-direction:column;
-gap:8px;
-margin-bottom:36px;
-}
-
-.tagline-option {
-padding:10px 16px;
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.08);
-border-radius:8px;
-font-family:‘Fraunces’,serif;
-font-size:14px;
-font-style:italic;
-color:rgba(255,255,255,.65);
-transition:all .2s;
-cursor:pointer;
-}
-
-.tagline-option:hover {
-background:rgba(255,255,255,.07);
-border-color:rgba(184,136,50,.35);
-color:var(–gold-l);
-}
-
-.tagline-option.active {
-background:rgba(184,136,50,.1);
-border-color:rgba(184,136,50,.4);
-color:var(–gold-l);
-}
-
-.hero-ctas {
-display:flex;
-gap:10px;
-}
-
-.btn {
-display:inline-flex;
-align-items:center;
-gap:7px;
-padding:11px 22px;
-border-radius:8px;
-font-size:12px;
-font-weight:600;
-letter-spacing:.06em;
-text-decoration:none;
-cursor:pointer;
-border:none;
-transition:all .2s;
-}
-
-.btn-gold { background:var(–gold); color:var(–void); }
-.btn-gold:hover { background:var(–gold-l); transform:translateY(-1px); }
-.btn-ghost { background:transparent; color:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.18); }
-.btn-ghost:hover { border-color:rgba(255,255,255,.35); color:#fff; }
-
-/* hero right: stat cards */
-.hero-right {
-display:flex;
-flex-direction:column;
-gap:14px;
-}
-
-.hero-stat {
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.08);
-border-radius:14px;
-padding:20px 24px;
-transition:all .25s;
-display:flex;
-gap:16px;
-align-items:center;
-}
-
-.hero-stat:hover {
-background:rgba(255,255,255,.07);
-border-color:rgba(184,136,50,.3);
-transform:translateX(-4px);
-}
-
-.hs-icon {
-font-size:24px;
-width:44px;height:44px;
-border-radius:10px;
-display:flex;align-items:center;justify-content:center;
-flex-shrink:0;
-}
-
-.hs-num {
-font-family:‘Fraunces’,serif;
-font-size:28px;
-color:#fff;
-line-height:1;
-margin-bottom:2px;
-}
-
-.hs-label {
-font-size:11px;
-color:rgba(255,255,255,.4);
-line-height:1.4;
-}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTIONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.sec {
-padding:88px 72px;
-border-bottom:1px solid var(–ink-20);
-position:relative;
-max-width:1200px;
-margin:0 auto;
-}
-
-.sec-full {
-padding:88px 72px;
-border-bottom:1px solid var(–ink-20);
-position:relative;
-background:var(–warm);
-}
-
-.sec-full .sec-inner {
-max-width:1200px;
-margin:0 auto;
-}
-
-.sec-dark {
-padding:88px 72px;
-background:var(–void);
-border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.sec-dark .sec-inner { max-width:1200px; margin:0 auto; }
-
-.sec-head { margin-bottom:48px; }
-
-.sec-eyebrow {
-font-size:9px;
-letter-spacing:.28em;
-text-transform:uppercase;
-font-weight:700;
-margin-bottom:6px;
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.se-r { color:var(–rose); }
-.se-g { color:var(–gold); }
-.se-s { color:var(–sage); }
-.se-t { color:var(–teal); }
-.se-m { color:var(–mist); }
-.se-w { color:rgba(255,255,255,.4); }
-
-.sec-eyebrow::before {
-content:’’;
-display:block;
-width:16px;height:2px;
-background:currentColor;
-}
-
-.sec-title {
-font-family:‘Fraunces’,serif;
-font-size:clamp(30px,4vw,50px);
-font-weight:300;
-line-height:1.1;
-margin-bottom:10px;
-letter-spacing:-.01em;
-}
-
-.sec-title-w { color:#fff; }
-
-.sec-desc {
-font-size:14px;
-color:var(–mist);
-max-width:560px;
-line-height:1.7;
-}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ATOMS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.grid { display:grid; gap:18px; }
-.g2 { grid-template-columns:1fr 1fr; }
-.g3 { grid-template-columns:1fr 1fr 1fr; }
-.g4 { grid-template-columns:1fr 1fr 1fr 1fr; }
-.g-2-1 { grid-template-columns:2fr 1fr; }
-.g-1-2 { grid-template-columns:1fr 2fr; }
-.g-3-2 { grid-template-columns:3fr 2fr; }
-
-.mt12{margin-top:12px}.mt20{margin-top:20px}.mt28{margin-top:28px}
-.mt40{margin-top:40px}.mt56{margin-top:56px}.mb8{margin-bottom:8px}
-.mb16{margin-bottom:16px}.mb24{margin-bottom:24px}
-
-.card {
-background:var(–white);
-border-radius:var(–r);
-border:1px solid var(–ink-20);
-padding:24px;
-box-shadow:0 1px 12px rgba(22,18,14,.05);
-transition:all .22s;
-}
-
-.card:hover {
-box-shadow:0 6px 28px rgba(22,18,14,.1);
-transform:translateY(-2px);
-}
-
-.card-warm { background:var(–warm); border-color:var(–warm2); }
-.card-dark { background:var(–ink); color:#fff; border-color:transparent; }
-.card-void { background:var(–void); color:#fff; border-color:rgba(255,255,255,.07); }
-
-.card-r { border-top:3px solid var(–rose); }
-.card-g { border-top:3px solid var(–gold); }
-.card-s { border-top:3px solid var(–sage); }
-.card-t { border-top:3px solid var(–teal); }
-.card-m { border-top:3px solid var(–mist); }
-
-.lbl {
-font-size:9px;
-font-weight:700;
-letter-spacing:.22em;
-text-transform:uppercase;
-margin-bottom:8px;
-display:block;
-}
-
-.lb-r{color:var(–rose)}.lb-g{color:var(–gold)}.lb-s{color:var(–sage)}
-.lb-t{color:var(–teal)}.lb-m{color:var(–mist)}.lb-w{color:rgba(255,255,255,.5)}
-
-.h3 {
-font-family:‘Fraunces’,serif;
-font-size:22px;
-font-weight:300;
-color:var(–ink);
-margin-bottom:12px;
-margin-top:28px;
-letter-spacing:-.01em;
-}
-
-.h3:first-child { margin-top:0; }
-.h3-w { color:#fff; }
-
-p { margin-bottom:12px; }
-p:last-child { margin-bottom:0; }
-
-.quote {
-border-left:3px solid var(–gold);
-padding:16px 20px;
-background:var(–gold-bg);
-border-radius:0 var(–r) var(–r) 0;
-}
-
-.quote p {
-font-family:‘Fraunces’,serif;
-font-size:17px;
-font-weight:300;
-font-style:italic;
-color:var(–ink);
-line-height:1.55;
-margin:0;
-}
-
-.pill {
-display:inline-block;
-padding:3px 10px;
-border-radius:20px;
-font-size:9px;
-font-weight:600;
-letter-spacing:.06em;
-}
-
-.pr { background:var(–rose-bg);border:1px solid rgba(192,104,88,.25);color:#8A2818; }
-.pg { background:var(–gold-bg);border:1px solid rgba(184,136,50,.3);color:#5A4000; }
-.ps { background:var(–sage-bg);border:1px solid rgba(92,140,100,.28);color:#1A5028; }
-.pt { background:rgba(58,120,120,.08);border:1px solid rgba(58,120,120,.25);color:var(–teal); }
-.pm { background:rgba(122,136,152,.1);border:1px solid rgba(122,136,152,.22);color:var(–slate); }
-.pw { background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75); }
-
-/* tag row */
-.tags { display:flex;flex-wrap:wrap;gap:5px;margin-top:8px; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PROJECT CARDS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.proj-card {
-background:var(–white);
-border-radius:var(–r-lg);
-border:1px solid var(–ink-20);
-overflow:hidden;
-box-shadow:0 2px 16px rgba(22,18,14,.06);
-transition:all .25s;
-display:flex;
-flex-direction:column;
-}
-
-.proj-card:hover {
-box-shadow:0 8px 36px rgba(22,18,14,.12);
-transform:translateY(-3px);
-}
-
-.proj-thumb {
-height:140px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:40px;
-position:relative;
-overflow:hidden;
-}
-
-.pt-rose { background:linear-gradient(135deg,#C06858,#8A3028); }
-.pt-gold { background:linear-gradient(135deg,#B88832,#785818); }
-.pt-sage { background:linear-gradient(135deg,#5C8C64,#2A5830); }
-.pt-teal { background:linear-gradient(135deg,#3A7878,#1A4848); }
-.pt-ink  { background:linear-gradient(135deg,#3C4858,#1A2030); }
-.pt-warm { background:linear-gradient(135deg,#C8A878,#8A6840); }
-
-.proj-thumb-num {
-position:absolute;
-bottom:10px;
-right:14px;
-font-family:‘Fraunces’,serif;
-font-size:60px;
-color:rgba(255,255,255,.1);
-font-weight:300;
-line-height:1;
-}
-
-.proj-body { padding:20px; flex:1; }
-
-.proj-title {
-font-family:‘Fraunces’,serif;
-font-size:18px;
-font-weight:300;
-color:var(–ink);
-margin-bottom:5px;
-}
-
-.proj-sub { font-size:12px; color:var(–mist); line-height:1.55; margin-bottom:10px; }
-
-.proj-meta { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:14px; border-top:1px solid var(–ink-20); }
-
-.proj-status { font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
-
-.ps-live  { color:var(–sage); }
-.ps-build { color:var(–gold); }
-.ps-exp   { color:var(–rose); }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STRENGTH CARDS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.strength {
-display:flex;
-gap:14px;
-padding:16px;
-background:var(–warm);
-border-radius:var(–r);
-border:1px solid var(–warm2);
-transition:all .2s;
-}
-
-.strength:hover { background:var(–white); box-shadow:0 3px 16px rgba(22,18,14,.08); }
-
-.str-icon {
-width:40px;height:40px;
-border-radius:10px;
-display:flex;align-items:center;justify-content:center;
-font-size:18px;
-flex-shrink:0;
-}
-
-.str-title { font-size:13px; font-weight:600; color:var(–ink); margin-bottom:3px; }
-.str-desc  { font-size:12px; color:var(–mist); line-height:1.5; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIMELINE (about)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.timeline { display:flex; flex-direction:column; position:relative; gap:0; }
-
-.timeline::before {
-content:’’;
-position:absolute;
-left:20px;top:28px;bottom:28px;
-width:2px;
-background:linear-gradient(180deg,var(–rose),var(–gold),var(–sage));
-}
-
-.tl-item {
-display:flex;
-gap:18px;
-padding-bottom:24px;
-position:relative;
-}
-
-.tl-dot {
-width:42px;height:42px;
-border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-font-size:16px;
-flex-shrink:0;
-z-index:1;
-border:2px solid var(–paper);
-box-shadow:0 2px 10px rgba(22,18,14,.1);
-}
-
-.td-r{background:var(–rose)}
-.td-g{background:var(–gold)}
-.td-s{background:var(–sage)}
-.td-t{background:var(–teal)}
-
-.tl-content {
-flex:1;
-background:var(–white);
-border-radius:var(–r);
-padding:16px 20px;
-border:1px solid var(–ink-20);
-margin-top:4px;
-}
-
-.tl-date { font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:var(–mist); margin-bottom:3px; font-weight:600; }
-.tl-title { font-family:‘Fraunces’,serif; font-size:16px; font-weight:300; color:var(–ink); margin-bottom:4px; }
-.tl-desc  { font-size:12px; color:var(–mist); line-height:1.55; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SALES PROOF
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.proof-num {
-font-family:‘Fraunces’,serif;
-font-size:clamp(52px,7vw,90px);
-font-weight:300;
-line-height:1;
-letter-spacing:-.02em;
-}
-
-.metric-box {
-text-align:center;
-padding:28px 20px;
-background:var(–white);
-border-radius:var(–r);
-border:1px solid var(–ink-20);
-box-shadow:0 1px 10px rgba(22,18,14,.05);
-}
-
-.mb-num {
-font-family:‘Fraunces’,serif;
-font-size:clamp(36px,5vw,60px);
-font-weight:300;
-line-height:1;
-letter-spacing:-.02em;
-margin-bottom:5px;
-}
-
-.mb-label {
-font-size:11px;
-color:var(–mist);
-line-height:1.4;
-}
-
-/* tactic rows */
-.tactic {
-display:flex;
-gap:14px;
-padding:14px;
-background:var(–white);
-border-radius:var(–r);
-border:1px solid var(–ink-20);
-margin-bottom:10px;
-transition:all .2s;
-}
-
-.tactic:hover { border-left-color:var(–rose); box-shadow:0 3px 14px rgba(22,18,14,.08); }
-
-.tac-num {
-font-family:‘Fraunces’,serif;
-font-size:28px;
-font-weight:300;
-color:var(–dust);
-line-height:1;
-min-width:32px;
-flex-shrink:0;
-margin-top:2px;
-}
-
-.tac-title { font-size:13px; font-weight:600; color:var(–ink); margin-bottom:3px; }
-.tac-desc  { font-size:12px; color:var(–mist); line-height:1.5; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STACK CHIPS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.stack-chip {
-display:inline-flex;
-align-items:center;
-gap:6px;
-padding:6px 12px;
-background:var(–white);
-border:1px solid var(–ink-20);
-border-radius:8px;
-font-size:11px;
-font-weight:500;
-color:var(–ink);
-box-shadow:0 1px 6px rgba(22,18,14,.06);
-transition:all .2s;
-}
-
-.stack-chip:hover { box-shadow:0 3px 12px rgba(22,18,14,.1); transform:translateY(-1px); }
-.sc-icon { font-size:14px; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FUNNEL (consumer to owner)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.fn-chain {
-display:flex;
-align-items:center;
-gap:0;
-flex-wrap:wrap;
-margin:20px 0;
-}
-
-.fn-node {
-padding:10px 16px;
-border-radius:8px;
-font-size:11px;
-font-weight:600;
-text-align:center;
-white-space:nowrap;
-}
-
-.fn-arrow {
-color:var(–mist);
-font-size:18px;
-padding:0 6px;
-flex-shrink:0;
-}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-OUTREACH SCRIPT BLOCK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.script {
-background:var(–void);
-border-radius:14px;
-overflow:hidden;
-margin:16px 0;
-}
-
-.script-head {
-padding:11px 18px;
-background:rgba(0,0,0,.3);
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.script-title { font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(–gold-l); font-weight:600; }
-.script-type  { font-size:9px; padding:3px 9px; background:rgba(184,136,50,.2); border:1px solid rgba(184,136,50,.35); color:var(–gold-l); border-radius:20px; }
-
-.script-body {
-padding:18px;
-font-size:13px;
-color:rgba(255,255,255,.7);
-line-height:1.8;
-font-style:italic;
-}
-
-.script-body strong { color:var(–rose-l); font-style:normal; }
-.script-body .ph { color:var(–gold-l); font-style:normal; font-weight:600; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CONTENT IDEAS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.content-card {
-padding:16px 18px;
-border-radius:var(–r);
-background:var(–white);
-border:1px solid var(–ink-20);
-transition:all .2s;
-}
-
-.content-card:hover { box-shadow:0 4px 18px rgba(22,18,14,.09); transform:translateY(-2px); }
-
-.cc-platform {
-font-size:9px;
-letter-spacing:.15em;
-text-transform:uppercase;
-font-weight:700;
-margin-bottom:5px;
-}
-
-.cc-hook {
-font-family:‘Fraunces’,serif;
-font-size:14px;
-font-weight:300;
-font-style:italic;
-color:var(–ink);
-line-height:1.45;
-margin-bottom:6px;
-}
-
-.cc-why { font-size:11px; color:var(–mist); line-height:1.5; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STILL NEED SECTION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.need-item {
-display:flex;
-gap:12px;
-padding:12px 16px;
-background:var(–white);
-border-radius:9px;
-border:1px solid var(–ink-20);
-align-items:flex-start;
-transition:all .2s;
-}
-
-.need-item:hover { box-shadow:0 3px 14px rgba(22,18,14,.08); }
-
-.ni-check {
-width:22px;height:22px;
-border:2px solid var(–dust);
-border-radius:5px;
-flex-shrink:0;
-margin-top:1px;
-}
-
-.ni-title { font-size:13px; font-weight:600; color:var(–ink); margin-bottom:2px; }
-.ni-desc  { font-size:11px; color:var(–mist); line-height:1.4; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CONTACT SECTION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.contact-link {
-display:flex;
-align-items:center;
-gap:14px;
-padding:18px 22px;
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.08);
-border-radius:var(–r);
-text-decoration:none;
-transition:all .22s;
-}
-
-.contact-link:hover {
-background:rgba(255,255,255,.08);
-border-color:rgba(184,136,50,.3);
-transform:translateX(4px);
-}
-
-.cl-icon {
-width:42px;height:42px;
-border-radius:10px;
-display:flex;align-items:center;justify-content:center;
-font-size:20px;
-background:rgba(255,255,255,.06);
-flex-shrink:0;
-}
-
-.cl-label { font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:2px; font-weight:600; }
-.cl-value { font-size:14px; color:rgba(255,255,255,.8); font-weight:500; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANIMATIONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.rv { opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s ease; }
-.rv.on { opacity:1; transform:none; }
-
-.sg>* { opacity:0; transform:translateY(16px); transition:opacity .44s ease,transform .44s ease; }
+  --void:   #090806;
+  --ink:    #181410;
+  --paper:  #FDFAF5;
+  --warm:   #F5EDE0;
+  --warm2:  #E8DCC8;
+  --dust:   #D8C8B0;
+  --rose:   #C06858;
+  --rose-l: #EABDAA;
+  --rose-bg:rgba(192,104,88,.07);
+  --gold:   #B88030;
+  --gold-l: #E8D090;
+  --gold-bg:rgba(184,128,48,.07);
+  --sage:   #5A8860;
+  --sage-l: #AECAB4;
+  --sage-bg:rgba(90,136,96,.07);
+  --mist:   #7A8898;
+  --slate:  #3C4858;
+  --white:  #FFFFFF;
+  --border: rgba(24,20,16,.09);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   NAV
+━━━━━━━━━━━━━━━━━━━━━━━ */
+nav{
+  position:fixed;top:0;left:0;right:0;
+  height:54px;
+  background:rgba(9,8,6,.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 52px;
+  z-index:100;
+}
+
+.nav-name{
+  font-family:'Fraunces',serif;
+  font-size:15px;font-weight:300;
+  color:rgba(255,255,255,.8);
+  letter-spacing:.02em;
+}
+
+.nav-links{display:flex;gap:4px;list-style:none;}
+
+.nav-links a{
+  text-decoration:none;
+  font-size:10px;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);
+  padding:5px 10px;border-radius:6px;
+  transition:all .18s;
+}
+
+.nav-links a:hover{color:rgba(255,255,255,.8);background:rgba(255,255,255,.07);}
+
+.nav-cta{
+  padding:7px 18px !important;
+  background:var(--gold) !important;
+  color:var(--void) !important;
+  border-radius:20px !important;
+  font-weight:700 !important;
+}
+
+.nav-cta:hover{background:var(--gold-l) !important;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   HERO
+━━━━━━━━━━━━━━━━━━━━━━━ */
+#home{
+  min-height:100vh;
+  background:var(--void);
+  display:flex;align-items:center;
+  padding:120px 72px 80px;
+  position:relative;overflow:hidden;
+}
+
+/* grain texture */
+#home::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+  opacity:.5;pointer-events:none;
+}
+
+/* warm glow */
+#home::after{
+  content:'';position:absolute;
+  top:-20%;right:-10%;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,104,88,.12) 0%,transparent 65%);
+  pointer-events:none;
+}
+
+.hero-inner{
+  position:relative;z-index:1;
+  max-width:1160px;width:100%;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:72px;align-items:center;
+}
+
+.hero-eyebrow{
+  font-size:9px;letter-spacing:.28em;
+  text-transform:uppercase;font-weight:700;
+  color:rgba(255,255,255,.35);
+  margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+
+.hero-eyebrow::before{
+  content:'';width:24px;height:1px;background:var(--gold);
+}
+
+.hero-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(52px,6.5vw,84px);
+  color:#fff;line-height:.98;
+  font-weight:300;
+  margin-bottom:22px;
+  letter-spacing:-.02em;
+}
+
+.hero-title em{color:var(--rose-l);font-style:italic;}
+
+.hero-origin{
+  font-size:15px;color:rgba(255,255,255,.55);
+  line-height:1.75;max-width:460px;
+  margin-bottom:32px;
+  font-style:italic;
+  border-left:2px solid var(--gold);
+  padding-left:18px;
+}
+
+.hero-origin strong{color:rgba(255,255,255,.8);font-style:normal;}
+
+/* three CTAs */
+.hero-ctas{
+  display:flex;flex-direction:column;gap:10px;
+  margin-bottom:36px;
+}
+
+.cta-row{display:flex;gap:10px;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:12px 22px;border-radius:8px;
+  font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-decoration:none;
+  cursor:pointer;border:none;transition:all .2s;
+  text-transform:uppercase;
+}
+
+.btn-gold{background:var(--gold);color:var(--void);}
+.btn-gold:hover{background:var(--gold-l);transform:translateY(-1px);}
+.btn-rose{background:var(--rose);color:#fff;}
+.btn-rose:hover{background:#D07868;transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.18);}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff;}
+
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;}
+
+.htag{
+  padding:4px 12px;border-radius:20px;
+  font-size:9px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;border:1px solid;
+}
+
+.ht-r{border-color:rgba(192,104,88,.4);color:var(--rose-l);background:rgba(192,104,88,.1);}
+.ht-g{border-color:rgba(184,128,48,.4);color:var(--gold-l);background:rgba(184,128,48,.1);}
+.ht-s{border-color:rgba(90,136,96,.4);color:var(--sage-l);background:rgba(90,136,96,.1);}
+.ht-w{border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.5);background:rgba(255,255,255,.05);}
+
+/* hero right */
+.hero-right{display:flex;flex-direction:column;gap:12px;}
+
+.hstat{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;padding:20px 24px;
+  display:flex;gap:14px;align-items:center;
+  transition:all .25s;cursor:default;
+}
+
+.hstat:hover{
+  background:rgba(255,255,255,.07);
+  border-color:rgba(184,128,48,.3);
+  transform:translateX(-4px);
+}
+
+.hstat-icon{
+  width:42px;height:42px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;
+}
+
+.hstat-num{
+  font-family:'Fraunces',serif;
+  font-size:26px;color:#fff;
+  line-height:1;margin-bottom:2px;
+}
+
+.hstat-label{font-size:10px;color:rgba(255,255,255,.38);line-height:1.4;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   AUDIENCE STRIP
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.audience-strip{
+  background:var(--void);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  padding:28px 72px;
+}
+
+.audience-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:1px;background:rgba(255,255,255,.06);
+}
+
+.aud-item{
+  padding:24px 32px;
+  background:var(--void);
+  transition:background .2s;
+}
+
+.aud-item:hover{background:rgba(255,255,255,.03);}
+
+.aud-label{
+  font-size:9px;letter-spacing:.22em;
+  text-transform:uppercase;font-weight:700;
+  margin-bottom:6px;
+}
+
+.aud-title{
+  font-family:'Fraunces',serif;
+  font-size:18px;font-weight:300;
+  color:#fff;margin-bottom:5px;
+}
+
+.aud-desc{font-size:12px;color:rgba(255,255,255,.4);line-height:1.55;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   SECTIONS
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.sec{
+  padding:88px 72px;
+  border-bottom:1px solid var(--border);
+}
+
+.sec-warm{
+  padding:88px 72px;
+  background:var(--warm);
+  border-bottom:1px solid var(--border);
+}
+
+.sec-dark{
+  padding:88px 72px;
+  background:var(--void);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.sec-inner{max-width:1160px;margin:0 auto;}
+
+.ey{
+  font-size:9px;letter-spacing:.28em;
+  text-transform:uppercase;font-weight:700;
+  margin-bottom:6px;
+  display:flex;align-items:center;gap:10px;
+}
+
+.ey::before{content:'';display:block;width:16px;height:2px;background:currentColor;}
+
+.ey-r{color:var(--rose)}.ey-g{color:var(--gold)}.ey-s{color:var(--sage)}
+.ey-m{color:var(--mist)}.ey-w{color:rgba(255,255,255,.4)}
+
+.sec-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(30px,4vw,52px);
+  font-weight:300;line-height:1.08;
+  margin-bottom:10px;letter-spacing:-.01em;
+}
+
+.sec-title-w{color:#fff;}
+
+.sec-desc{
+  font-size:14px;color:var(--mist);
+  max-width:560px;line-height:1.7;
+  margin-bottom:44px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   GRID
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.grid{display:grid;gap:18px;}
+.g2{grid-template-columns:1fr 1fr;}
+.g3{grid-template-columns:1fr 1fr 1fr;}
+.g4{grid-template-columns:1fr 1fr 1fr 1fr;}
+.g-3-2{grid-template-columns:3fr 2fr;}
+.g-2-1{grid-template-columns:2fr 1fr;}
+.g-1-2{grid-template-columns:1fr 2fr;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   CARDS
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.card{
+  background:var(--white);
+  border-radius:14px;
+  border:1px solid var(--border);
+  padding:24px;
+  box-shadow:0 1px 12px rgba(24,20,16,.05);
+  transition:all .22s;
+}
+
+.card:hover{box-shadow:0 6px 28px rgba(24,20,16,.1);transform:translateY(-2px);}
+
+.card-warm{background:var(--warm);border-color:var(--warm2);}
+.card-void{background:var(--void);border-color:rgba(255,255,255,.07);color:#fff;}
+.card-r{border-top:3px solid var(--rose);}
+.card-g{border-top:3px solid var(--gold);}
+.card-s{border-top:3px solid var(--sage);}
+
+.lbl{
+  font-size:9px;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;
+  margin-bottom:8px;display:block;
+}
+
+.lb-r{color:var(--rose)}.lb-g{color:var(--gold)}.lb-s{color:var(--sage)}
+.lb-m{color:var(--mist)}.lb-w{color:rgba(255,255,255,.5)}
+
+.h3{
+  font-family:'Fraunces',serif;
+  font-size:22px;font-weight:300;
+  color:var(--ink);margin-bottom:12px;
+  margin-top:28px;letter-spacing:-.01em;
+}
+.h3:first-child{margin-top:0;}
+.h3-w{color:#fff;}
+
+.quote{
+  border-left:3px solid var(--gold);
+  padding:16px 20px;
+  background:var(--gold-bg);
+  border-radius:0 12px 12px 0;
+}
+
+.quote p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px;font-weight:300;
+  font-style:italic;color:var(--ink);
+  line-height:1.55;margin:0;
+}
+
+.pill{
+  display:inline-block;padding:3px 10px;
+  border-radius:20px;font-size:9px;font-weight:600;letter-spacing:.06em;
+}
+
+.pr{background:var(--rose-bg);border:1px solid rgba(192,104,88,.25);color:#8A2818;}
+.pg{background:var(--gold-bg);border:1px solid rgba(184,128,48,.3);color:#5A4000;}
+.ps{background:var(--sage-bg);border:1px solid rgba(90,136,96,.28);color:#1A5028;}
+.pm{background:rgba(122,136,152,.1);border:1px solid rgba(122,136,152,.22);color:var(--slate);}
+.pw{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   ORIGIN SECTION
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.origin-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;
+}
+
+.origin-num{
+  font-family:'Fraunces',serif;
+  font-size:clamp(80px,12vw,160px);
+  font-weight:300;color:var(--dust);
+  line-height:1;letter-spacing:-.04em;
+  opacity:.4;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   SALES PROOF
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.metric-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-bottom:44px;
+}
+
+.metric{
+  text-align:center;padding:28px 16px;
+  background:var(--white);border-radius:14px;
+  border:1px solid var(--border);
+  box-shadow:0 1px 10px rgba(24,20,16,.05);
+}
+
+.metric-num{
+  font-family:'Fraunces',serif;
+  font-size:clamp(36px,5vw,58px);
+  font-weight:300;line-height:1;
+  letter-spacing:-.02em;margin-bottom:5px;
+}
+
+.metric-label{font-size:11px;color:var(--mist);line-height:1.4;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   GTM FUNNEL
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.funnel-chain{
+  display:flex;align-items:center;
+  gap:0;flex-wrap:wrap;
+  margin:20px 0 28px;
+}
+
+.fn{
+  padding:10px 16px;border-radius:8px;
+  font-size:11px;font-weight:600;
+  white-space:nowrap;
+}
+
+.fn-arr{color:var(--mist);font-size:18px;padding:0 6px;flex-shrink:0;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   TIMELINE
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.tl{display:flex;flex-direction:column;position:relative;}
+
+.tl::before{
+  content:'';position:absolute;
+  left:20px;top:28px;bottom:28px;
+  width:2px;
+  background:linear-gradient(180deg,var(--rose),var(--gold),var(--sage));
+}
+
+.tl-item{display:flex;gap:18px;padding-bottom:22px;position:relative;}
+
+.tl-dot{
+  width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;z-index:1;
+  border:2px solid var(--paper);
+  box-shadow:0 2px 10px rgba(24,20,16,.1);
+}
+
+.td-r{background:var(--rose);}
+.td-g{background:var(--gold);}
+.td-s{background:var(--sage);}
+.td-t{background:var(--mist);}
+
+.tl-body{
+  flex:1;background:var(--white);
+  border-radius:12px;padding:14px 18px;
+  border:1px solid var(--border);margin-top:4px;
+}
+
+.tl-date{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--mist);margin-bottom:2px;font-weight:600;}
+.tl-title{font-family:'Fraunces',serif;font-size:16px;font-weight:300;color:var(--ink);margin-bottom:3px;}
+.tl-desc{font-size:12px;color:var(--mist);line-height:1.55;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   STACK CHIPS
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+
+.chip{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:6px 12px;background:var(--white);
+  border:1px solid var(--border);border-radius:8px;
+  font-size:11px;font-weight:500;color:var(--ink);
+  box-shadow:0 1px 6px rgba(24,20,16,.05);
+  transition:all .2s;
+}
+
+.chip:hover{box-shadow:0 3px 12px rgba(24,20,16,.1);transform:translateY(-1px);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   PROJECT CARDS
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.proj{
+  background:var(--white);border-radius:16px;
+  border:1px solid var(--border);overflow:hidden;
+  box-shadow:0 2px 16px rgba(24,20,16,.06);
+  transition:all .25s;display:flex;flex-direction:column;
+}
+
+.proj:hover{box-shadow:0 8px 36px rgba(24,20,16,.12);transform:translateY(-3px);}
+
+.proj-thumb{
+  height:130px;display:flex;align-items:center;
+  justify-content:center;font-size:36px;
+  position:relative;overflow:hidden;
+}
+
+.pt-r{background:linear-gradient(135deg,#C06858,#8A3028);}
+.pt-g{background:linear-gradient(135deg,#B88030,#785018);}
+.pt-s{background:linear-gradient(135deg,#5A8860,#2A5830);}
+.pt-t{background:linear-gradient(135deg,#3A7878,#1A4848);}
+.pt-i{background:linear-gradient(135deg,#3C4858,#1A2030);}
+
+.proj-thumb-n{
+  position:absolute;bottom:8px;right:12px;
+  font-family:'Fraunces',serif;font-size:52px;
+  color:rgba(255,255,255,.1);font-weight:300;line-height:1;
+}
+
+.proj-body{padding:18px;flex:1;}
+.proj-title{font-family:'Fraunces',serif;font-size:17px;font-weight:300;color:var(--ink);margin-bottom:4px;}
+.proj-sub{font-size:12px;color:var(--mist);line-height:1.55;margin-bottom:10px;}
+.proj-foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border);}
+.proj-status{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+.ps-live{color:var(--sage)}.ps-build{color:var(--gold)}.ps-exp{color:var(--rose)}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.contact-link{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 20px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;text-decoration:none;
+  transition:all .22s;
+}
+
+.contact-link:hover{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(184,128,48,.3);
+  transform:translateX(4px);
+}
+
+.cl-icon{
+  width:40px;height:40px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;background:rgba(255,255,255,.06);flex-shrink:0;
+}
+
+.cl-lbl{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;font-weight:600;}
+.cl-val{font-size:13px;color:rgba(255,255,255,.75);font-weight:500;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   INSIGHT BOXES
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.ins{padding:14px 18px;border-radius:12px;font-size:13px;line-height:1.65;margin-bottom:10px;}
+.ins-r{background:var(--rose-bg);border:1px solid rgba(192,104,88,.2);border-left:3px solid var(--rose);}
+.ins-g{background:var(--gold-bg);border:1px solid rgba(184,128,48,.22);border-left:3px solid var(--gold);}
+.ins-s{background:var(--sage-bg);border:1px solid rgba(90,136,96,.2);border-left:3px solid var(--sage);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   ANIMATIONS
+━━━━━━━━━━━━━━━━━━━━━━━ */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.rv.on{opacity:1;transform:none;}
+
+.sg>*{opacity:0;transform:translateY(14px);transition:opacity .44s ease,transform .44s ease;}
 .sg.on>*:nth-child(1){opacity:1;transform:none;transition-delay:.04s}
 .sg.on>*:nth-child(2){opacity:1;transform:none;transition-delay:.10s}
 .sg.on>*:nth-child(3){opacity:1;transform:none;transition-delay:.16s}
 .sg.on>*:nth-child(4){opacity:1;transform:none;transition-delay:.22s}
 .sg.on>*:nth-child(5){opacity:1;transform:none;transition-delay:.28s}
 .sg.on>*:nth-child(6){opacity:1;transform:none;transition-delay:.34s}
-.sg.on>*:nth-child(7){opacity:1;transform:none;transition-delay:.40s}
-.sg.on>*:nth-child(8){opacity:1;transform:none;transition-delay:.46s}
-.sg.on>*:nth-child(9){opacity:1;transform:none;transition-delay:.52s}
 
-/* page load animation */
-@keyframes fadeUp {
-from { opacity:0; transform:translateY(24px); }
-to   { opacity:1; transform:translateY(0); }
-}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+.hero-left{animation:fadeUp .7s .1s ease forwards;opacity:0;}
+.hero-right{animation:fadeUp .7s .25s ease forwards;opacity:0;}
 
-.hero-content > * {
-animation:fadeUp .7s ease forwards;
-}
-.hero-left  { animation-delay:.1s; opacity:0; }
-.hero-right { animation-delay:.25s; opacity:0; }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DIVIDER ORNAMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.ornament {
-display:flex;
-align-items:center;
-gap:12px;
-margin:32px 0;
-}
-
-.ornament::before,.ornament::after {
-content:’’;
-flex:1;
-height:1px;
-background:var(–ink-20);
-}
-
-.ornament span {
-font-size:16px;
-color:var(–dust);
-}
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SITEMAP BOX
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.sitemap-grid {
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:10px;
-}
-
-.sm-node {
-padding:14px 12px;
-border-radius:10px;
-text-align:center;
-cursor:pointer;
-transition:all .2s;
-}
-
-.sm-node:hover { transform:translateY(-2px); box-shadow:0 4px 16px rgba(22,18,14,.1); }
-
-.sm-num {
-font-family:‘Fraunces’,serif;
-font-size:22px;
-font-weight:300;
-line-height:1;
-margin-bottom:5px;
-}
-
-.sm-label {
-font-size:10px;
-font-weight:600;
-letter-spacing:.05em;
-line-height:1.3;
-}
-
-.smn-r { background:var(–rose-bg);border:1px solid rgba(192,104,88,.22);color:var(–rose); }
-.smn-g { background:var(–gold-bg);border:1px solid rgba(184,136,50,.25);color:var(–gold); }
-.smn-s { background:var(–sage-bg);border:1px solid rgba(92,140,100,.22);color:var(–sage); }
-.smn-t { background:rgba(58,120,120,.07);border:1px solid rgba(58,120,120,.2);color:var(–teal); }
-.smn-m { background:rgba(122,136,152,.07);border:1px solid rgba(122,136,152,.18);color:var(–slate); }
-
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RESPONSIVE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-@media(max-width:900px) {
-nav { padding:0 20px; }
-.nav-links { display:none; }
-#home { padding:80px 24px 60px; }
-.hero-content { grid-template-columns:1fr; gap:40px; }
-.hero-right { display:none; }
-.sec,.sec-full,.sec-dark { padding:60px 24px; }
-.g2,.g3,.g4,.g-2-1,.g-1-2,.g-3-2 { grid-template-columns:1fr; }
-.sitemap-grid { grid-template-columns:repeat(2,1fr); }
+/* ━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━━━ */
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  #home{padding:90px 24px 60px;}
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .hero-right{display:none;}
+  .sec,.sec-warm,.sec-dark{padding:60px 24px;}
+  .audience-strip{padding:24px;}
+  .audience-inner{grid-template-columns:1fr;}
+  .g2,.g3,.g4,.g-3-2,.g-2-1,.g-1-2{grid-template-columns:1fr;}
+  .metric-row{grid-template-columns:1fr 1fr;}
+  .origin-split{grid-template-columns:1fr;}
 }
 </style>
-
 </head>
 <body>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   NAV
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
+<!-- NAV -->
 <nav>
-  <div class="nav-name">Portfolio — GTM Operator</div>
+  <div class="nav-name">Jessica Evelyn Hak</div>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
+    <li><a href="#origin">Story</a></li>
     <li><a href="#sales">Sales Proof</a></li>
+    <li><a href="#cto">The App</a></li>
     <li><a href="#gtm">GTM Lab</a></li>
-    <li><a href="#cto">Consumer → Owner</a></li>
-    <li><a href="#community">Community</a></li>
-    <li><a href="#content">Content</a></li>
+    <li><a href="#polished">Polished</a></li>
     <li><a href="#systems">Systems</a></li>
     <li><a href="#contact" class="nav-cta">Connect →</a></li>
   </ul>
 </nav>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   HERO / HOME
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   HERO
+━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section id="home">
-  <div class="hero-bg-text">GTM</div>
-  <div class="hero-grain"></div>
-
-  <div class="hero-content">
+  <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-eyebrow">Emerging GTM Operator · 2026</div>
-      <h1 class="hero-title">Sales. Systems.<br><em>Strategy.</em></h1>
-      <p class="hero-sub">I turn pipeline into proof. I've generated $450K+ in revenue in 4 months through pure conviction, outbound hustle, and field-tested sales strategy. Now I'm building the modern GTM infrastructure layer behind it.</p>
-
-```
-  <div class="hero-roles">
-    <span class="role-tag rt-r">GTM Operator</span>
-    <span class="role-tag rt-g">Sales Strategist</span>
-    <span class="role-tag rt-s">Founder in Progress</span>
-    <span class="role-tag rt-n">Community Builder</span>
-    <span class="role-tag rt-n">Partnerships</span>
-  </div>
-
-  <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px;font-weight:600;">Tagline options — pick your favorite:</p>
-  <div class="hero-taglines">
-    <div class="tagline-option active">"I close deals in the field. I build systems in the office."</div>
-    <div class="tagline-option">"From door-to-door to startup infrastructure."</div>
-    <div class="tagline-option">"Revenue proved. Systems building. Founder thinking."</div>
-    <div class="tagline-option">"I don't wait for the playbook. I write it."</div>
-  </div>
-
-  <div class="hero-ctas">
-    <a href="#contact" class="btn btn-gold">Let's Connect →</a>
-    <a href="#sales" class="btn btn-ghost">See the Proof</a>
-  </div>
-</div>
-
-<div class="hero-right">
-  <div class="hero-stat">
-    <div class="hs-icon" style="background:rgba(192,104,88,.15);">💰</div>
-    <div>
-      <div class="hs-num">$450K+</div>
-      <div class="hs-label">Revenue generated in 4 months</div>
+      <div class="hero-eyebrow">Venice, CA · Founder · GTM Operator · 2026</div>
+      <h1 class="hero-title">I got tired<br>of <em>draining.</em><br>I started<br>building.</h1>
+      <p class="hero-origin">
+        Shopping started feeling like work. Every purchase felt like losing — draining rather than investing in myself. Until I understood how business and money actually work. <strong>That shift is what I'm building a company around.</strong>
+      </p>
+      <div class="hero-ctas">
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-gold">Hire Me →</a>
+          <a href="#cto" class="btn btn-rose">Back Me →</a>
+          <a href="#polished" class="btn btn-ghost">Join Me →</a>
+        </div>
+      </div>
+      <div class="hero-tags">
+        <span class="htag ht-r">Founder</span>
+        <span class="htag ht-g">GTM Operator</span>
+        <span class="htag ht-s">Sales Strategist</span>
+        <span class="htag ht-w">Community Builder</span>
+        <span class="htag ht-w">Venice, CA</span>
+      </div>
     </div>
-  </div>
-  <div class="hero-stat">
-    <div class="hs-icon" style="background:rgba(184,136,50,.15);">🚪</div>
-    <div>
-      <div class="hs-num">D2D</div>
-      <div class="hs-label">Door-to-door sales · full-cycle outbound · closing under pressure</div>
-    </div>
-  </div>
-  <div class="hero-stat">
-    <div class="hs-icon" style="background:rgba(92,140,100,.15);">🏗️</div>
-    <div>
-      <div class="hs-num">1 App</div>
-      <div class="hs-label">From Consumer to Owner — women's investing ed concept in build</div>
-    </div>
-  </div>
-  <div class="hero-stat">
-    <div class="hs-icon" style="background:rgba(58,120,120,.15);">👩‍👩‍👧</div>
-    <div>
-      <div class="hs-num">Community</div>
-      <div class="hs-label">Building women-focused business events + ecosystems</div>
-    </div>
-  </div>
-</div>
-```
 
+    <div class="hero-right">
+      <div class="hstat">
+        <div class="hstat-icon" style="background:rgba(192,104,88,.15);">💰</div>
+        <div>
+          <div class="hstat-num">$450K+</div>
+          <div class="hstat-label">Revenue in 4 months · Aptive Environmental + Grit Marketing</div>
+        </div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-icon" style="background:rgba(184,128,48,.15);">🚪</div>
+        <div>
+          <div class="hstat-num">D2D</div>
+          <div class="hstat-label">Door-to-door · full cycle · zero warm leads · closing under pressure</div>
+        </div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-icon" style="background:rgba(90,136,96,.15);">🏗️</div>
+        <div>
+          <div class="hstat-num">1 App</div>
+          <div class="hstat-label">From Consumer to Owner — women's investing ed · pre-seed concept</div>
+        </div>
+      </div>
+      <div class="hstat">
+        <div class="hstat-icon" style="background:rgba(255,255,255,.08);">✨</div>
+        <div>
+          <div class="hstat-num">Polished</div>
+          <div class="hstat-label">Women in business community · Venice + beyond</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   SITEMAP
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<div style="padding:48px 72px;border-bottom:1px solid var(--ink-20);background:var(--warm);">
-  <div style="max-width:1200px;margin:0 auto;">
-    <p style="font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);font-weight:600;margin-bottom:16px;">Portfolio Sitemap — 10 Sections</p>
-    <div class="sitemap-grid">
-      <a href="#home" style="text-decoration:none;" class="sm-node smn-r"><div class="sm-num">01</div><div class="sm-label">Home / Positioning</div></a>
-      <a href="#about" style="text-decoration:none;" class="sm-node smn-g"><div class="sm-num">02</div><div class="sm-label">About Me</div></a>
-      <a href="#sales" style="text-decoration:none;" class="sm-node smn-r"><div class="sm-num">03</div><div class="sm-label">Proof of Sales</div></a>
-      <a href="#gtm" style="text-decoration:none;" class="sm-node smn-g"><div class="sm-num">04</div><div class="sm-label">GTM Learning Lab</div></a>
-      <a href="#cto" style="text-decoration:none;" class="sm-node smn-s"><div class="sm-num">05</div><div class="sm-label">Consumer → Owner</div></a>
-      <a href="#community" style="text-decoration:none;" class="sm-node smn-t"><div class="sm-num">06</div><div class="sm-label">Community + Events</div></a>
-      <a href="#outreach" style="text-decoration:none;" class="sm-node smn-r"><div class="sm-num">07</div><div class="sm-label">Outreach Experiments</div></a>
-      <a href="#content" style="text-decoration:none;" class="sm-node smn-g"><div class="sm-num">08</div><div class="sm-label">Content / Thought Leadership</div></a>
-      <a href="#systems" style="text-decoration:none;" class="sm-node smn-s"><div class="sm-num">09</div><div class="sm-label">Systems + Tools</div></a>
-      <a href="#contact" style="text-decoration:none;" class="sm-node smn-m"><div class="sm-num">10</div><div class="sm-label">Contact / Opportunities</div></a>
+<!-- AUDIENCE STRIP -->
+<div class="audience-strip">
+  <div class="audience-inner">
+    <div class="aud-item">
+      <div class="aud-label" style="color:var(--gold);">For Startups & SaaS</div>
+      <div class="aud-title">Hire Me</div>
+      <div class="aud-desc">$450K proven sales + GTM infrastructure builder. I close deals and build the systems behind them.</div>
+    </div>
+    <div class="aud-item">
+      <div class="aud-label" style="color:var(--rose-l);">For Accelerators & Investors</div>
+      <div class="aud-title">Back Me</div>
+      <div class="aud-desc">I'm the market I'm building for. Real strategy, real GTM, real gap. Looking for the right accelerator and seed partners.</div>
+    </div>
+    <div class="aud-item">
+      <div class="aud-label" style="color:var(--sage-l);">For Women Founders & Operators</div>
+      <div class="aud-title">Join Me</div>
+      <div class="aud-desc">Building Polished — a community for women who work hard and want to build something that lasts. Venice and beyond.</div>
     </div>
   </div>
 </div>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   02 · ABOUT ME
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<section class="sec" id="about">
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   ORIGIN STORY
+━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec" id="origin">
+<div class="sec-inner">
   <div class="sec-head rv">
-    <div class="sec-eyebrow se-g">02 · About Me</div>
-    <h2 class="sec-title">Sales-trained.<br>Systems-minded.<br><em>Builder by nature.</em></h2>
-    <p class="sec-desc">I started in the field — knocking on doors in the summer heat, learning to read people in 10 seconds, and closing contracts on driveways. That foundation never left me.</p>
+    <div class="ey ey-g">The Story</div>
+    <h2 class="sec-title">Why I'm building this.</h2>
+    <p class="sec-desc">Not the pitch. The real reason.</p>
+  </div>
+
+  <div class="origin-split rv">
+    <div>
+      <div class="quote mb24" style="margin-bottom:24px;">
+        <p>"Shopping started feeling like work. And I realized — I liked making money more than spending it. But every purchase still felt like draining, not investing. Until I started understanding how business and money actually work."</p>
+      </div>
+
+      <p>I grew up watching women work incredibly hard — in male-dominated workforces, in systems that weren't built for them, often without the support structure that men take for granted. Men get to have a partner at home. Women are expected to do it all, alone, and still show up.</p>
+
+      <p>The result? Women spend to cope. They shop as a reward for the grind. They drain their accounts on brands that make them feel good for a moment — because no one ever showed them how to OWN those brands instead.</p>
+
+      <p>I know because I was that woman. I was great at selling. I generated $450K in four months knocking on doors in the summer heat. I understood business on the outside. But my own money? I was consuming, not building.</p>
+
+      <p><strong>That's the frame I'm working to change. And the work I'm building to change it.</strong></p>
+
+      <p>When I was interviewing successful women for a role at NWM — women who had made it professionally — none of them fully understood their own finances. That wasn't a personal failure. That was a systemic one. And it confirmed everything I was building toward.</p>
+
+      <div style="margin-top:24px;padding:18px 20px;background:var(--warm);border-radius:12px;border:1px solid var(--warm2);">
+        <p style="font-family:'Fraunces',serif;font-size:16px;font-style:italic;color:var(--ink);margin:0;">"From Consumer to Owner isn't just a product name. It's the shift I made — and the one I'm building for every woman who's been draining instead of building."</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-dot td-r">🚪</div>
+          <div class="tl-body">
+            <div class="tl-date">2023–2024</div>
+            <div class="tl-title">Aptive Environmental + Grit Marketing</div>
+            <div class="tl-desc">$450K+ revenue in 4 months. Door-to-door, full cycle, zero warm leads. Learned sales from the ground up — trust, territory, objection, close.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot td-g">💡</div>
+          <div class="tl-body">
+            <div class="tl-date">2024</div>
+            <div class="tl-title">The Shift</div>
+            <div class="tl-desc">Realized I was great at selling for companies but not building for myself. Started studying GTM systems, CRM, AI workflows, and modern startup infrastructure.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot td-s">🏗️</div>
+          <div class="tl-body">
+            <div class="tl-date">2025</div>
+            <div class="tl-title">From Consumer to Owner — Born</div>
+            <div class="tl-desc">The concept crystallized. Women know these brands. They should own them. Built the full GTM strategy, curriculum, and business model from scratch.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" style="background:var(--mist);">✨</div>
+          <div class="tl-body">
+            <div class="tl-date">2026 · Now</div>
+            <div class="tl-title">Building in Venice, CA</div>
+            <div class="tl-desc">Growing Polished community. Seeking accelerator + seed partners. Open to GTM/operator roles at mission-aligned startups. Building the company I wish existed.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-g mt20" style="margin-top:16px;">
+        <span class="lbl lb-g">Core Strengths</span>
+        <div style="display:flex;flex-direction:column;gap:7px;margin-top:6px;">
+          <div style="padding:8px 12px;background:var(--warm);border-radius:7px;font-size:12px;border-left:2px solid var(--rose);">🧠 Frames the problem AND builds the infrastructure to solve it</div>
+          <div style="padding:8px 12px;background:var(--warm);border-radius:7px;font-size:12px;border-left:2px solid var(--gold);">💬 Closes cold — D2D, DM, cold email, in a room</div>
+          <div style="padding:8px 12px;background:var(--warm);border-radius:7px;font-size:12px;border-left:2px solid var(--sage);">👩 Understands the customer because she IS the customer</div>
+          <div style="padding:8px 12px;background:var(--warm);border-radius:7px;font-size:12px;border-left:2px solid var(--mist);">🔄 Builds systems that work while she sleeps</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   SALES PROOF
+━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec-warm" id="sales">
+<div class="sec-inner">
+  <div class="sec-head rv">
+    <div class="ey ey-r">Proof of Sales</div>
+    <h2 class="sec-title">$450K in 4 months.<br>Zero warm leads.</h2>
+    <p class="sec-desc">Everything I know about GTM started at a stranger's front door. Here's what the field actually taught me — and how it transfers to every modern sales motion.</p>
+  </div>
+
+  <div class="metric-row sg">
+    <div class="metric"><div class="metric-num" style="color:var(--rose);">$450K+</div><div class="metric-label">Revenue · Aptive Environmental + Grit Marketing</div></div>
+    <div class="metric"><div class="metric-num" style="color:var(--gold);">4 mo</div><div class="metric-label">Timeframe · summer door-to-door campaign</div></div>
+    <div class="metric"><div class="metric-num" style="color:var(--sage);">0</div><div class="metric-label">Warm leads · 100% cold outbound from day one</div></div>
+    <div class="metric"><div class="metric-num" style="color:var(--mist);">Full</div><div class="metric-label">Cycle · prospect → pitch → close → retain</div></div>
   </div>
 
   <div class="grid g-3-2 rv">
     <div>
-      <div class="quote mb24">
-        <p>"I didn't learn GTM in a classroom. I learned it at 2pm in July, standing on someone's porch, deciding in real time whether to ask for the close or build more trust first."</p>
-      </div>
-      <p>My background is full-cycle sales — from prospecting a territory on a map to shaking hands at the close. I generated <strong>$450K+ in revenue in 4 months</strong> through door-to-door pest control sales. No warm leads. No inbound. Pure outbound, pure conviction.</p>
-      <p>That experience taught me more about human psychology, objection handling, and trust-building than any sales training I've seen since. I understand what it means to earn someone's business from a cold start.</p>
-      <p>Now I'm building into the modern infrastructure layer — GTM systems, CRM architecture, AI workflows, lead generation, and outreach automation. I'm learning it by doing it. I'm documenting it in public. I'm building proof alongside the knowledge.</p>
-      <p>Alongside all of this, I'm building <strong>From Consumer to Owner</strong>, a women-focused investing education platform — and organizing community events that bring women founders and operators together in real rooms, doing real things.</p>
-
-```
-  <div class="ornament"><span>✦</span></div>
-
-  <h3 class="h3">My Operating Style</h3>
-  <div style="display:flex;flex-direction:column;gap:8px;">
-    <div style="padding:12px 16px;background:var(--warm);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;"><strong>Bias toward action.</strong> I'd rather test and learn than plan and delay. Every experiment is data.</div>
-    <div style="padding:12px 16px;background:var(--warm);border-radius:9px;border-left:3px solid var(--rose);font-size:13px;"><strong>Relationship-first everything.</strong> Whether it's a prospect, a partner, or a community member — trust is the infrastructure.</div>
-    <div style="padding:12px 16px;background:var(--warm);border-radius:9px;border-left:3px solid var(--sage);font-size:13px;"><strong>Systems over heroics.</strong> I want to build machines that work while I sleep, not just close deals when I'm on.</div>
-    <div style="padding:12px 16px;background:var(--warm);border-radius:9px;border-left:3px solid var(--teal);font-size:13px;"><strong>Build in public.</strong> I share what I'm learning, what's working, what isn't. Transparency compounds trust.</div>
-  </div>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:16px;">
-  <h3 class="h3" style="margin-top:0;">My Journey</h3>
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot td-r">🚪</div>
-      <div class="tl-content">
-        <div class="tl-date">2023–2024 · Sales Foundation</div>
-        <div class="tl-title">Door-to-Door Sales · Pest Control</div>
-        <div class="tl-desc">$450K+ revenue in 4 months. Full-cycle outbound — territory mapping, cold prospecting, trust building, and closing. Learned sales from the ground up, literally.</div>
+      <h3 class="h3" style="margin-top:0;">What D2D Actually Teaches You</h3>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:12px;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--border);">
+          <div style="font-family:'Fraunces',serif;font-size:28px;color:var(--dust);min-width:30px;flex-shrink:0;">01</div>
+          <div><div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px;">Territory as a Market</div><div style="font-size:12px;color:var(--mist);">Map before you walk. Identify density, skip problem addresses, prioritize high-intent signals. Your territory is an ICP waiting to be segmented.</div></div>
+        </div>
+        <div style="display:flex;gap:12px;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--border);">
+          <div style="font-family:'Fraunces',serif;font-size:28px;color:var(--dust);min-width:30px;flex-shrink:0;">02</div>
+          <div><div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px;">Trust Before Pitch</div><div style="font-size:12px;color:var(--mist);">The pest control pitch that works isn't about bugs. It's about protecting their home, their family, their investment. Lead with what they care about.</div></div>
+        </div>
+        <div style="display:flex;gap:12px;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--border);">
+          <div style="font-family:'Fraunces',serif;font-size:28px;color:var(--dust);min-width:30px;flex-shrink:0;">03</div>
+          <div><div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px;">Objection = A Trust Question</div><div style="font-size:12px;color:var(--mist);">"Too expensive" is never about price. Every objection is a question about whether they believe you. Answer the real question.</div></div>
+        </div>
+        <div style="display:flex;gap:12px;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--border);">
+          <div style="font-family:'Fraunces',serif;font-size:28px;color:var(--dust);min-width:30px;flex-shrink:0;">04</div>
+          <div><div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px;">Emotional Regulation IS a Sales Skill</div><div style="font-size:12px;color:var(--mist);">You still have to knock the next door with the same energy as the first — after 20 rejections in the summer heat. That's the real skill.</div></div>
+        </div>
       </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-dot td-g">📊</div>
-      <div class="tl-content">
-        <div class="tl-date">2024 · GTM Pivot</div>
-        <div class="tl-title">Discovering Modern Sales Infrastructure</div>
-        <div class="tl-desc">Realized field skills were powerful but incomplete. Started studying CRM systems, outreach automation, AI workflows, and modern GTM strategy. Building in public.</div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="quote">
+        <p>"The close is the least important moment in the sale. The trust you built in the 4 minutes before it is everything."</p>
       </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot td-s">🏗️</div>
-      <div class="tl-content">
-        <div class="tl-date">2025 · Building</div>
-        <div class="tl-title">From Consumer to Owner + Community Events</div>
-        <div class="tl-desc">Launched the "From Consumer to Owner" app concept. Started building women-in-business community events. Developing partnerships and outreach experiments.</div>
+
+      <div class="card card-r">
+        <span class="lbl lb-r">D2D → Modern GTM Translation</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">Territory mapping → ICP segmentation</div>
+          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">Porch pitch → cold email first sentence</div>
+          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">Objection handling → discovery call prep</div>
+          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">Follow-up flywheel → outreach sequences</div>
+          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">Closing under pressure → pipeline discipline</div>
+        </div>
       </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot td-t">🚀</div>
-      <div class="tl-content">
-        <div class="tl-date">2026 · Now</div>
-        <div class="tl-title">Seeking Startup / GTM Roles</div>
-        <div class="tl-desc">Applying to GTM, partnerships, sales, operator, and recruiting roles at growth-stage startups. Ready to bring field-proven sales + emerging systems thinking to a team.</div>
+
+      <div class="card">
+        <span class="lbl lb-g">Companies</span>
+        <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px;font-size:13px;">
+          <div>🏢 <strong>Aptive Environmental</strong> — national pest control, D2D summer campaign</div>
+          <div>🏢 <strong>Grit Marketing</strong> — sales organization, full-cycle outbound</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-```
-
-  </div>
-
-  <h3 class="h3 mt40 rv">Core Strengths</h3>
-  <div class="grid g3 sg">
-    <div class="strength"><div class="str-icon" style="background:var(--rose-bg);">💬</div><div><div class="str-title">Cold Outreach + Trust Building</div><div class="str-desc">I can start a conversation from zero and build enough trust to close — in-person, on the phone, in a DM.</div></div></div>
-    <div class="strength"><div class="str-icon" style="background:var(--gold-bg);">🗺️</div><div><div class="str-title">Territory + ICP Strategy</div><div class="str-desc">I know how to map a market, identify high-probability targets, and work a territory systematically.</div></div></div>
-    <div class="strength"><div class="str-icon" style="background:var(--sage-bg);">🔄</div><div><div class="str-title">Objection Handling Under Pressure</div><div class="str-desc">I've been told "no" more times than most people have asked. I know what turns a "no" into "let me think about it."</div></div></div>
-    <div class="strength"><div class="str-icon" style="background:rgba(58,120,120,.08);">🏗️</div><div><div class="str-title">GTM Systems Thinking</div><div class="str-desc">Learning CRM architecture, lead gen stacks, automation workflows, and AI tools to build scalable go-to-market machines.</div></div></div>
-    <div class="strength"><div class="str-icon" style="background:rgba(184,136,50,.08);">👩‍👩‍👧</div><div><div class="str-title">Community Building</div><div class="str-desc">I know how to get people in rooms, build relationships before I need them, and create ecosystems that attract the right people.</div></div></div>
-    <div class="strength"><div class="str-icon" style="background:rgba(122,136,152,.08);">📖</div><div><div class="str-title">Storytelling + Narrative</div><div class="str-desc">I can explain complex ideas in simple, emotionally resonant terms. This is the actual skill behind great sales, content, and GTM.</div></div></div>
-  </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   03 · PROOF OF SALES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<div class="sec-full" id="sales">
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   FROM CONSUMER TO OWNER
+━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec-dark" id="cto">
 <div class="sec-inner">
   <div class="sec-head rv">
-    <div class="sec-eyebrow se-r">03 · Proof of Sales</div>
-    <h2 class="sec-title">$450K+ in 4 months.<br>Zero warm leads.</h2>
-    <p class="sec-desc">Every dollar earned through cold outbound — door-to-door, full-cycle, under pressure. Here's what the field actually taught me.</p>
+    <div class="ey ey-w">The Startup Concept</div>
+    <h2 class="sec-title sec-title-w">From Consumer<br>to Owner.</h2>
+    <p class="sec-desc" style="color:rgba(255,255,255,.5);">A women-focused investing education platform. The problem is real. The audience is massive. The GTM is built. I am the market.</p>
   </div>
 
-  <div class="grid g4 rv">
-    <div class="metric-box">
-      <div class="mb-num" style="color:var(--rose);">$450K+</div>
-      <div class="mb-label">Revenue generated in 4 months of door-to-door sales</div>
+  <div class="grid g3 sg mb28" style="margin-bottom:28px;">
+    <div class="card card-void card-r">
+      <span class="lbl lb-r">The Problem</span>
+      <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;">Women drive 80% of consumer spending. They work in systems not built for them. They spend to cope. They drain rather than build. No investing platform was ever built for her first — and it shows.</p>
     </div>
-    <div class="metric-box">
-      <div class="mb-num" style="color:var(--gold);">100%</div>
-      <div class="mb-label">Cold outbound — no inbound leads, no warm pipeline</div>
+    <div class="card card-void card-g">
+      <span class="lbl lb-g">The Insight</span>
+      <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;">I interviewed successful professional women for a role at NWM. None of them fully understood their own finances. This isn't a personal failure. It's a systemic gap — at every income level.</p>
     </div>
-    <div class="metric-box">
-      <div class="mb-num" style="color:var(--sage);">Full</div>
-      <div class="mb-label">Cycle ownership — prospecting, pitching, closing, retention</div>
-    </div>
-    <div class="metric-box">
-      <div class="mb-num" style="color:var(--teal);">D2D</div>
-      <div class="mb-label">Door-to-door format — the hardest school for real sales</div>
+    <div class="card card-void card-s">
+      <span class="lbl lb-s">The Solution</span>
+      <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;">Teach investing through brands she already loves. Stocks through Lululemon. Bonds through Starbucks. The Fed through why her latte costs more. Familiar = accessible. Accessible = action.</p>
     </div>
   </div>
 
-  <div class="grid g-3-2 mt40 rv">
-    <div>
-      <h3 class="h3">What the Field Actually Teaches You</h3>
+  <!-- GTM in action -->
+  <div class="rv" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;margin-bottom:28px;">
+    <span class="lbl lb-g">GTM Strategy — In Action</span>
+    <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:16px;">This is how the go-to-market motion actually works — from first content view to paid subscriber to referral flywheel.</p>
 
-```
-  <div class="tactic">
-    <div class="tac-num">01</div>
-    <div><div class="tac-title">Territory Strategy</div><div class="tac-desc">Map the neighborhood before you walk it. Identify density patterns, skip problem addresses, prioritize high-intent signals. Treat your territory like a market — not a grid to walk in sequence.</div></div>
-  </div>
-  <div class="tactic">
-    <div class="tac-num">02</div>
-    <div><div class="tac-title">The 10-Second Read</div><div class="tac-desc">You have 10 seconds on someone's porch before they decide if they'll listen. Eye contact, energy, first sentence. Mirror the homeowner's tone, don't overwhelm them, earn the next 30 seconds.</div></div>
-  </div>
-  <div class="tactic">
-    <div class="tac-num">03</div>
-    <div><div class="tac-title">Trust Before Pitch</div><div class="tac-desc">The pest control pitch that works isn't about bugs — it's about protecting the home, the kids, the foundation. Lead with what they care about, not what you're selling.</div></div>
-  </div>
-  <div class="tactic">
-    <div class="tac-num">04</div>
-    <div><div class="tac-title">Objection Handling</div><div class="tac-desc">"I already have a service" → "Let me show you something on your door frame first." "Too expensive" → "What does it cost you if we do nothing?" Every objection is a question about trust, not price.</div></div>
-  </div>
-  <div class="tactic">
-    <div class="tac-num">05</div>
-    <div><div class="tac-title">Closing Under Pressure</div><div class="tac-desc">Summer heat, rejections stacked up, end of day, quota pressure. You still have to knock the next door with the same energy as the first. Emotional regulation IS a sales skill.</div></div>
-  </div>
-  <div class="tactic">
-    <div class="tac-num">06</div>
-    <div><div class="tac-title">The Follow-Up Flywheel</div><div class="tac-desc">The second visit to a "maybe" converted more revenue than cold doors combined. The fortune is in the follow-up — in field sales and in every GTM motion that follows.</div></div>
-  </div>
-</div>
+    <div class="funnel-chain">
+      <div class="fn" style="background:rgba(192,104,88,.15);color:var(--rose-l);">📱 TikTok Hook</div>
+      <div class="fn-arr">→</div>
+      <div class="fn" style="background:rgba(184,128,48,.15);color:var(--gold-l);">🌐 Landing Page</div>
+      <div class="fn-arr">→</div>
+      <div class="fn" style="background:rgba(90,136,96,.15);color:var(--sage-l);">📋 Waitlist</div>
+      <div class="fn-arr">→</div>
+      <div class="fn" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);">✉️ 5-Email Drip</div>
+      <div class="fn-arr">→</div>
+      <div class="fn" style="background:rgba(192,104,88,.15);color:var(--rose-l);">🎓 Free Workshop</div>
+      <div class="fn-arr">→</div>
+      <div class="fn" style="background:rgba(184,128,48,.15);color:var(--gold-l);">💬 Community</div>
+      <div class="fn-arr">→</div>
+      <div class="fn" style="background:rgba(90,136,96,.15);color:var(--sage-l);">💳 Paid + Referral</div>
+    </div>
 
-<div style="display:flex;flex-direction:column;gap:14px;">
-  <h3 class="h3" style="margin-top:0;">The Pitch Breakdown</h3>
-  <div class="card card-g" style="background:var(--white);">
-    <span class="lbl lb-g">Pest Control Sales Framework</span>
-    <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;">
-      <div style="padding:10px 13px;background:var(--warm);border-radius:8px;font-size:12px;border-left:3px solid var(--rose);">
-        <strong>Hook (10 sec):</strong> "Hey, I'm actually in your neighborhood today — I wanted to show you something real quick on your property."
+    <div class="grid g3" style="gap:12px;margin-top:16px;">
+      <div style="padding:12px 14px;background:rgba(255,255,255,.04);border-radius:9px;">
+        <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-l);margin-bottom:5px;font-weight:600;">Content Hook</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.6);font-style:italic;">"You spent $480 at Lululemon this year. That's 4.8 shares of LULU. Here's what that means."</div>
       </div>
-      <div style="padding:10px 13px;background:var(--warm);border-radius:8px;font-size:12px;border-left:3px solid var(--gold);">
-        <strong>Pain Reveal (60 sec):</strong> Walk them to a visible evidence point (webs, entry gaps, moisture). Make the problem real, not hypothetical.
+      <div style="padding:12px 14px;background:rgba(255,255,255,.04);border-radius:9px;">
+        <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose-l);margin-bottom:5px;font-weight:600;">First Offer</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.6);">Free 60-min workshop: "How to Own Starbucks for $20." Pitch paid beta at the end.</div>
       </div>
-      <div style="padding:10px 13px;background:var(--warm);border-radius:8px;font-size:12px;border-left:3px solid var(--sage);">
-        <strong>Social Proof (30 sec):</strong> "We've been treating 14 homes on your street this week — your neighbors [name] and [name] just signed up."
-      </div>
-      <div style="padding:10px 13px;background:var(--warm);border-radius:8px;font-size:12px;border-left:3px solid var(--teal);">
-        <strong>Close (ask + silence):</strong> "Based on what I showed you, this makes sense for your home. Should we get you started today or Friday?"
+      <div style="padding:12px 14px;background:rgba(255,255,255,.04);border-radius:9px;">
+        <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-l);margin-bottom:5px;font-weight:600;">Growth Loop</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.6);">Give a friend 2 free weeks → you get 1 free month. Women refer. That's the flywheel.</div>
       </div>
     </div>
-  </div>
-
-  <div class="card">
-    <span class="lbl lb-r">Key Lesson That Transfers to Every GTM Role</span>
-    <div class="quote" style="margin-top:8px;">
-      <p>"The close is the least important moment in the sale. The trust you built in the 4 minutes before it is everything."</p>
-    </div>
-    <p style="font-size:12px;color:var(--mist);margin-top:10px;margin-bottom:0;">This transfers directly to SaaS sales, partnership outreach, recruiting conversations, and every cold email you'll ever write.</p>
-  </div>
-
-  <div class="card card-r">
-    <span class="lbl lb-r">How This Translates to Modern GTM</span>
-    <div style="display:flex;flex-direction:column;gap:6px;font-size:12px;">
-      <div style="padding:6px 10px;background:var(--warm);border-radius:6px;">D2D territory mapping → ICP targeting and account segmentation</div>
-      <div style="padding:6px 10px;background:var(--warm);border-radius:6px;">Porch pitch → cold email subject line and first sentence</div>
-      <div style="padding:6px 10px;background:var(--warm);border-radius:6px;">Objection handling → discovery call preparation and talk tracks</div>
-      <div style="padding:6px 10px;background:var(--warm);border-radius:6px;">Follow-up flywheel → outreach automation sequences</div>
-      <div style="padding:6px 10px;background:var(--warm);border-radius:6px;">Closing under pressure → pipeline discipline and quota management</div>
-    </div>
-  </div>
-</div>
-```
-
-  </div>
-</div>
-</div>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   04 · GTM LEARNING LAB
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<section class="sec" id="gtm">
-  <div class="sec-head rv">
-    <div class="sec-eyebrow se-g">04 · GTM Learning Lab</div>
-    <h2 class="sec-title">Building the modern<br>sales infrastructure.</h2>
-    <p class="sec-desc">I'm studying and building modern GTM systems in real time — CRM, lead gen, outreach automation, and AI workflows. Here's what I'm learning and how I'm applying it.</p>
   </div>
 
   <div class="grid g-2-1 rv">
     <div>
-      <h3 class="h3" style="margin-top:0;">What I'm Learning + Building</h3>
+      <h3 class="h3 h3-w" style="margin-top:0;">Why I'm the Right Person to Build This</h3>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="strength"><div class="str-icon" style="background:var(--rose-bg);">🎯</div><div><div class="str-title">CRM Architecture</div><div class="str-desc">Building contact pipelines in HubSpot. Lifecycle stages, contact properties, deal pipelines, sequence triggers. Mapping what a real GTM contact database looks like.</div></div></div>
-        <div class="strength"><div class="str-icon" style="background:var(--gold-bg);">📣</div><div><div class="str-title">Lead Generation Systems</div><div class="str-desc">Apollo.io for ICP prospecting. LinkedIn Sales Navigator filters. List-building from job postings, funding announcements, and company signals. Building a real top-of-funnel machine.</div></div></div>
-        <div class="strength"><div class="str-icon" style="background:var(--sage-bg);">✉️</div><div><div class="str-title">Outreach Automation</div><div class="str-desc">Instantly.ai and Lemlist for cold email sequences. A/B testing subject lines. Personalization at scale using company-specific hooks. Tracking open rates, reply rates, and meeting books.</div></div></div>
-        <div class="strength"><div class="str-icon" style="background:rgba(58,120,120,.08);">🤖</div><div><div class="str-title">AI + Workflow Automation</div><div class="str-desc">Zapier for system connections. Claude and GPT-4o for copy, strategy, and research. Building automations that connect form fills → CRM → email sequences → Slack notifications.</div></div></div>
-        <div class="strength"><div class="str-icon" style="background:rgba(184,136,50,.08);">📊</div><div><div class="str-title">Analytics + Tracking</div><div class="str-desc">GA4 for web. Mixpanel thinking for product. UTM tracking for attribution. Learning to read the data that tells you which channel is actually working — and why.</div></div></div>
+        <div class="ins ins-r"><strong style="color:var(--rose-l);">I am the customer.</strong> I was the woman spending on brands I didn't own. I felt the drain. I made the shift. That's not a demographic — that's lived experience.</div>
+        <div class="ins ins-g"><strong style="color:var(--gold-l);">I can sell it.</strong> $450K in 4 months from cold. I know how to find a prospect, earn their trust, and close. Most founders can think but can't sell. I do both.</div>
+        <div class="ins ins-s"><strong style="color:var(--sage-l);">I've done the research.</strong> Real interviews with real women — including successful professionals who didn't understand their finances. The gap is confirmed at every income level.</div>
       </div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:14px;">
-      <div class="card card-g">
-        <span class="lbl lb-g">My Fake Pipeline Experiment</span>
-        <p style="font-size:13px;line-height:1.65;">I built a simulated GTM pipeline from scratch — no company, no product — to learn the mechanics of modern sales infrastructure.</p>
-        <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;font-size:12px;">
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Defined a fake ICP (female founders, $500K–$5M revenue)</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Built a 200-contact list using Apollo + LinkedIn</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Wrote 3-step cold email sequence in Instantly</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Set up HubSpot pipeline with 7 lifecycle stages</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Automated: form → CRM → welcome email via Zapier</div>
-        </div>
-      </div>
-      <div class="card">
-        <span class="lbl lb-r">What I'm Still Building</span>
-        <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px;">
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">→ A/B testing framework for cold outreach</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">→ Content-to-conversion attribution model</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">→ Full waitlist-to-community funnel for CTO app</div>
-          <div style="padding:7px 10px;background:var(--warm);border-radius:6px;font-size:12px;">→ Partnership outreach tracking dashboard</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h3 class="h3 mt40 rv">GTM Stack I'm Learning</h3>
-  <div style="display:flex;flex-wrap:wrap;gap:8px;" class="rv">
-    <span class="stack-chip"><span class="sc-icon">🧡</span> HubSpot CRM</span>
-    <span class="stack-chip"><span class="sc-icon">🎯</span> Apollo.io</span>
-    <span class="stack-chip"><span class="sc-icon">💼</span> LinkedIn Sales Nav</span>
-    <span class="stack-chip"><span class="sc-icon">📨</span> Instantly.ai</span>
-    <span class="stack-chip"><span class="sc-icon">💌</span> Lemlist</span>
-    <span class="stack-chip"><span class="sc-icon">⚡</span> Zapier</span>
-    <span class="stack-chip"><span class="sc-icon">🤖</span> Make / Integromat</span>
-    <span class="stack-chip"><span class="sc-icon">🧠</span> Claude AI</span>
-    <span class="stack-chip"><span class="sc-icon">💡</span> GPT-4o</span>
-    <span class="stack-chip"><span class="sc-icon">📰</span> Beehiiv</span>
-    <span class="stack-chip"><span class="sc-icon">🛍️</span> Klaviyo</span>
-    <span class="stack-chip"><span class="sc-icon">📊</span> Mixpanel</span>
-    <span class="stack-chip"><span class="sc-icon">👀</span> Hotjar</span>
-    <span class="stack-chip"><span class="sc-icon">🔍</span> Google Analytics 4</span>
-    <span class="stack-chip"><span class="sc-icon">📔</span> Notion</span>
-    <span class="stack-chip"><span class="sc-icon">📋</span> Airtable</span>
-    <span class="stack-chip"><span class="sc-icon">🌐</span> Webflow</span>
-    <span class="stack-chip"><span class="sc-icon">📝</span> Typeform</span>
-    <span class="stack-chip"><span class="sc-icon">💳</span> Stripe</span>
-    <span class="stack-chip"><span class="sc-icon">🔗</span> Rewardful</span>
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   05 · FROM CONSUMER TO OWNER
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<div class="sec-dark" id="cto">
-<div class="sec-inner">
-  <div class="sec-head rv">
-    <div class="sec-eyebrow se-w">05 · Startup Concept</div>
-    <h2 class="sec-title sec-title-w">From Consumer to Owner.</h2>
-    <p class="sec-desc" style="color:rgba(255,255,255,.5);">A women-focused investing education platform. Proof that I can think like a founder, build like an operator, and market like a strategist.</p>
-  </div>
-
-  <div class="grid g3 sg">
-    <div class="card card-void card-r">
-      <span class="lbl lb-r">The Problem</span>
-      <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;">Women drive 80% of consumer spending but are significantly underrepresented in investing. The gap isn't capability — it's the entry point. Finance was never built for her.</p>
-    </div>
-    <div class="card card-void card-g">
-      <span class="lbl lb-g">The Audience</span>
-      <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;">Millennial and Gen Z women (24–38). Brand-loyal consumers. TikTok-native learners. Financially curious but never given an emotionally accessible entry point into investing.</p>
-    </div>
-    <div class="card card-void card-s">
-      <span class="lbl lb-s">The Solution</span>
-      <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;">Teach investing through brands she already loves. Stocks through Lululemon. Bonds through Starbucks. The Fed through why her latte costs more. Familiar brands as the bridge.</p>
-    </div>
-  </div>
-
-  <div class="grid g-2-1 mt28 rv">
-    <div>
-      <h3 class="h3 h3-w">GTM Plan (in action)</h3>
-      <div class="fn-chain">
-        <div class="fn-node" style="background:rgba(192,104,88,.15);color:var(--rose-l);">📱 TikTok</div>
-        <div class="fn-arrow">→</div>
-        <div class="fn-node" style="background:rgba(184,136,50,.15);color:var(--gold-l);">🌐 Landing</div>
-        <div class="fn-arrow">→</div>
-        <div class="fn-node" style="background:rgba(92,140,100,.15);color:var(--sage-l);">📋 Waitlist</div>
-        <div class="fn-arrow">→</div>
-        <div class="fn-node" style="background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);">✉️ Email</div>
-        <div class="fn-arrow">→</div>
-        <div class="fn-node" style="background:rgba(58,120,120,.15);color:var(--sage-l);">🎓 Workshop</div>
-        <div class="fn-arrow">→</div>
-        <div class="fn-node" style="background:rgba(192,104,88,.15);color:var(--rose-l);">💳 Paid</div>
-      </div>
-      <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;">Content-led distribution. Community-first growth. Referral flywheel at subscription. The entire GTM plan is documented in my GTM documents — this is proof I can think end-to-end.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;">
       <div class="card card-void" style="border-top:2px solid var(--gold);">
         <span class="lbl lb-g">Monetization</span>
         <div style="font-size:12px;color:rgba(255,255,255,.55);display:flex;flex-direction:column;gap:5px;margin-top:6px;">
-          <div>✦ Free newsletter + workshops (top of funnel)</div>
-          <div>✦ $27 beta 4-week email course</div>
+          <div>✦ Free newsletter + workshops</div>
+          <div>✦ $27 beta 4-week course</div>
           <div>✦ $12/mo community membership</div>
           <div>✦ Brand-sponsored curriculum (Phase 2)</div>
-          <div>✦ Cohort-based courses ($99–299)</div>
+          <div>✦ Cohort courses $99–299</div>
         </div>
       </div>
-      <div class="card card-void">
-        <span class="lbl lb-r">Why This Matters to Employers</span>
-        <p style="font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;margin:0;">Building this shows I can define a market, craft a GTM strategy, build the infrastructure, and think through monetization — skills that transfer directly to any startup GTM role.</p>
+      <div class="card card-void" style="border-top:2px solid var(--rose);">
+        <span class="lbl lb-r">Seeking</span>
+        <div style="font-size:12px;color:rgba(255,255,255,.55);display:flex;flex-direction:column;gap:5px;margin-top:6px;">
+          <div>✦ Accelerator programs (YC, All Raise, Backstage, Female Founders Fund)</div>
+          <div>✦ Pre-seed investors who back founder-market fit</div>
+          <div>✦ Advisors in FinTech + EdTech</div>
+          <div>✦ Brand partnerships for curriculum</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+</section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   06 · COMMUNITY + EVENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<section class="sec" id="community">
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   GTM LAB
+━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec" id="gtm">
+<div class="sec-inner">
   <div class="sec-head rv">
-    <div class="sec-eyebrow se-t">06 · Community + Events</div>
-    <h2 class="sec-title">Building rooms<br>for women who build.</h2>
-    <p class="sec-desc">Community is a distribution channel and a brand strategy simultaneously. I'm building both through women-in-business events and founder outreach.</p>
+    <div class="ey ey-g">GTM Learning Lab</div>
+    <h2 class="sec-title">Building the modern<br>sales infrastructure.</h2>
+    <p class="sec-desc">I'm learning and building GTM systems in real time — documenting every experiment, stack decision, and lesson in public.</p>
+  </div>
+
+  <div class="grid g3 sg">
+    <div class="proj">
+      <div class="proj-thumb pt-r"><span>🎯</span><div class="proj-thumb-n">01</div></div>
+      <div class="proj-body">
+        <div class="proj-title">HubSpot CRM Setup</div>
+        <div class="proj-sub">7-stage lifecycle pipeline. Custom contact properties. Auto-tag by source, brand preference, and engagement score. Connected to Zapier automations.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;"><span class="pill ps">HubSpot</span><span class="pill pm">Zapier</span></div>
+        <div class="proj-foot"><div class="proj-status ps-build">In Progress</div><span class="pill pg">Infrastructure</span></div>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="proj-thumb pt-g"><span>📣</span><div class="proj-thumb-n">02</div></div>
+      <div class="proj-body">
+        <div class="proj-title">Fake Pipeline Experiment</div>
+        <div class="proj-sub">Built a simulated GTM pipeline with no company — 200-contact Apollo list, 3-step cold email sequence, full HubSpot setup — to learn the mechanics by doing.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;"><span class="pill pg">Apollo</span><span class="pill pm">Instantly</span></div>
+        <div class="proj-foot"><div class="proj-status ps-live">Complete</div><span class="pill pr">Experiment</span></div>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="proj-thumb pt-s"><span>✉️</span><div class="proj-thumb-n">03</div></div>
+      <div class="proj-body">
+        <div class="proj-title">Female Founder Outreach</div>
+        <div class="proj-sub">Targeted female-owned businesses in Venice/LA using Apollo + LinkedIn. Personalized DM sequences. Tested reply rates, hooks, and follow-up timing.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;"><span class="pill ps">LinkedIn</span><span class="pill pm">Apollo</span></div>
+        <div class="proj-foot"><div class="proj-status ps-build">Active</div><span class="pill ps">Outreach</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h3 mt40 rv">GTM Stack I'm Building With</h3>
+  <div class="chips rv">
+    <span class="chip">🧡 HubSpot</span><span class="chip">🎯 Apollo.io</span>
+    <span class="chip">💼 LinkedIn Sales Nav</span><span class="chip">📨 Instantly.ai</span>
+    <span class="chip">💌 Lemlist</span><span class="chip">⚡ Zapier</span>
+    <span class="chip">🤖 Make</span><span class="chip">🧠 Claude AI</span>
+    <span class="chip">💡 GPT-4o</span><span class="chip">📰 Beehiiv</span>
+    <span class="chip">🛍️ Klaviyo</span><span class="chip">📊 Mixpanel</span>
+    <span class="chip">👀 Hotjar</span><span class="chip">🔍 GA4</span>
+    <span class="chip">📔 Notion</span><span class="chip">📋 Airtable</span>
+    <span class="chip">🌐 Webflow</span><span class="chip">💳 Stripe</span>
+  </div>
+</div>
+</section>
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   POLISHED
+━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec-warm" id="polished">
+<div class="sec-inner">
+  <div class="sec-head rv">
+    <div class="ey ey-s">Community + Events</div>
+    <h2 class="sec-title">Polished.</h2>
+    <p class="sec-desc">A community for women who work hard and want to build something that lasts. Starting in Venice, CA.</p>
   </div>
 
   <div class="grid g-3-2 rv">
     <div>
-      <h3 class="h3" style="margin-top:0;">ConnectHer Club — Concept</h3>
-      <p>A local and virtual events series designed to bring women founders, operators, and builders into real rooms together. Not panels. Not networking with name tags. <strong>Real conversations, real introductions, real business happens here.</strong></p>
-      <p>The format: small groups (12–20), a guided conversation prompt, a warm intro from the host, and always a reason to come back. Built on the insight that women don't need more conferences — they need more rooms where they can speak honestly.</p>
-
-```
-  <div class="grid g2 mt20" style="gap:10px;">
-    <div style="padding:14px;background:var(--warm);border-radius:10px;border:1px solid var(--warm2);">
-      <div class="lbl lb-t">Event Format</div>
-      <ul style="list-style:none;font-size:12px;display:flex;flex-direction:column;gap:4px;color:var(--mist);">
-        <li>✦ Intimate: 12–20 attendees max</li>
-        <li>✦ Themed conversation (not a panel)</li>
-        <li>✦ Warm intro for each attendee</li>
-        <li>✦ 1 follow-up action item per attendee</li>
-      </ul>
-    </div>
-    <div style="padding:14px;background:var(--warm);border-radius:10px;border:1px solid var(--warm2);">
-      <div class="lbl lb-r">Event Topics</div>
-      <ul style="list-style:none;font-size:12px;display:flex;flex-direction:column;gap:4px;color:var(--mist);">
-        <li>✦ Revenue before funding</li>
-        <li>✦ Building your first pipeline</li>
-        <li>✦ Women + money + ownership</li>
-        <li>✦ GTM for non-technical founders</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:14px;">
-  <div class="card card-t">
-    <span class="lbl lb-t">Partnership Strategy</span>
-    <p style="font-size:13px;line-height:1.65;">Identify women-owned businesses, coworking spaces, and female-founded brands as co-hosts and sponsors. Give them community access, not just a logo placement. Real partnership = mutual value.</p>
-  </div>
-  <div class="card">
-    <span class="lbl lb-g">Founder Outreach Process</span>
-    <div style="font-size:12px;display:flex;flex-direction:column;gap:6px;margin-top:6px;">
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">1. Research founder's company + recent news</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">2. Find genuine connection (shared mission, ICP overlap)</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">3. Personalized DM / email — no pitch, just curiosity</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">4. Give first — share something useful before asking</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;">5. Invite to event or introduce to someone in network</div>
-    </div>
-  </div>
-  <div class="card card-r">
-    <span class="lbl lb-r">Why This is GTM Proof</span>
-    <p style="font-size:12px;color:var(--mist);line-height:1.6;margin:0;">Building community IS the GTM motion for most modern startups. Every event is a lead gen play, a trust-building exercise, and a distribution channel simultaneously.</p>
-  </div>
-</div>
-```
-
-  </div>
-</section>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   07 · OUTREACH EXPERIMENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<div class="sec-full" id="outreach">
-<div class="sec-inner">
-  <div class="sec-head rv">
-    <div class="sec-eyebrow se-r">07 · Outreach Experiments</div>
-    <h2 class="sec-title">Learning by doing.<br>Documenting the reps.</h2>
-    <p class="sec-desc">Real outreach attempts, lessons learned, and frameworks built from the experiments. This is where proof of learning lives.</p>
-  </div>
-
-  <div class="grid g2 rv">
-    <div>
-      <h3 class="h3" style="margin-top:0;">Clipboard Health Assignment</h3>
-      <p>As part of exploring modern sales roles, I completed a Clipboard Health-style outreach assignment — targeting a specific ICP, building a prospect list, writing cold outreach, and thinking through the follow-up strategy.</p>
-
-```
-  <div class="script">
-    <div class="script-head">
-      <span class="script-title">Cold Email · Female-Owned Business Targeting</span>
-      <span class="script-type">Email · Sequence Step 1</span>
-    </div>
-    <div class="script-body">
-      <strong>Subject: Quick question, [First Name]</strong><br><br>
-      Hey <span class="ph">[First Name]</span>,<br><br>
-      I came across <span class="ph">[Company Name]</span> while researching women-owned businesses in <span class="ph">[City]</span> — <span class="ph">[specific observation about their brand/mission/product]</span>.<br><br>
-      I'm building a community and resource network specifically for women founders and operators in the <span class="ph">[region]</span> area. We're hosting a small roundtable next month — 15 founders, one focused conversation, no pitch decks.<br><br>
-      Would something like that be useful to you right now?<br><br>
-      <strong>— [Your name]</strong>
-    </div>
-  </div>
-
-  <div class="script" style="margin-top:10px;">
-    <div class="script-head">
-      <span class="script-title">Follow-Up · Day 5 (No Reply)</span>
-      <span class="script-type">Email · Sequence Step 2</span>
-    </div>
-    <div class="script-body">
-      <strong>Subject: Re: Quick question, [First Name]</strong><br><br>
-      Hey <span class="ph">[First Name]</span> — just bumping this to the top in case it got buried.<br><br>
-      I noticed <span class="ph">[something new: recent post, award, news item]</span> — congrats on that. The roundtable I mentioned earlier has spots for 2 more founders and I thought of you.<br><br>
-      No pressure either way — just wanted to make sure it landed.
-    </div>
-  </div>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:14px;">
-  <h3 class="h3" style="margin-top:0;">Lessons Learned</h3>
-  <div class="card card-r">
-    <span class="lbl lb-r">What Actually Works</span>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;font-size:12px;margin-top:6px;">
-      <li style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Specificity beats length every time. One genuine observation > three generic sentences.</li>
-      <li style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Women founders respond to community, not cold pitch. Lead with the room, not the product.</li>
-      <li style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Follow-up with new value, not "just checking in." Give them a reason to reply.</li>
-      <li style="padding:7px 10px;background:var(--warm);border-radius:6px;">✦ Subject lines that sound like a human sent them perform 3× better than "clever" subject lines.</li>
-    </ul>
-  </div>
-
-  <div class="card card-g">
-    <span class="lbl lb-g">Female-Owned Business Targeting Strategy</span>
-    <div style="font-size:12px;display:flex;flex-direction:column;gap:6px;margin-top:6px;">
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;"><strong>Source:</strong> Certify platform, SBA database, Instagram DMs, local chamber of commerce</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;"><strong>Filter:</strong> Founded by women, 1–20 employees, consumer or service business</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;"><strong>Personalization:</strong> 1 real observation per email. Never templated greetings.</div>
-      <div style="padding:7px 10px;background:var(--warm);border-radius:6px;"><strong>Track:</strong> Open rate, reply rate, conversion to conversation in HubSpot</div>
-    </div>
-  </div>
-</div>
-```
-
-  </div>
-</div>
-</div>
-
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   08 · CONTENT / THOUGHT LEADERSHIP
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<section class="sec" id="content">
-  <div class="sec-head rv">
-    <div class="sec-eyebrow se-g">08 · Content / Thought Leadership</div>
-    <h2 class="sec-title">Content is the<br>longest-lasting GTM asset.</h2>
-    <p class="sec-desc">Ideas for TikTok, LinkedIn, and newsletter — building an audience that trusts me before they ever need me professionally.</p>
-  </div>
-
-  <h3 class="h3 rv">TikTok Content Ideas</h3>
-  <div class="grid g3 sg">
-    <div class="content-card">
-      <div class="cc-platform" style="color:var(--rose);">TikTok · Finance + Brand</div>
-      <div class="cc-hook">"You spent $480 at Lululemon last year. That's 4.8 shares of LULU. Here's what that means."</div>
-      <div class="cc-why">Brand → stock hook. Stops the scroll for anyone who shops Lululemon. Educational + relatable.</div>
-    </div>
-    <div class="content-card">
-      <div class="cc-platform" style="color:var(--rose);">TikTok · Sales Truth</div>
-      <div class="cc-hook">"I knocked on 50 doors today and got 48 nos. Here's what I learned from the 2 yeses."</div>
-      <div class="cc-why">Door-to-door story. Emotional, educational, relatable to anyone in sales or building a business.</div>
-    </div>
-    <div class="content-card">
-      <div class="cc-platform" style="color:var(--rose);">TikTok · GTM Education</div>
-      <div class="cc-hook">"CRM, outreach automation, lead gen — I'm learning modern sales infrastructure in public. Week 3 update."</div>
-      <div class="cc-why">Build-in-public content. Attracts other learners and operators. Documents the journey.</div>
-    </div>
-  </div>
-
-  <h3 class="h3 mt28 rv">LinkedIn Post Ideas</h3>
-  <div class="grid g3 sg">
-    <div class="content-card">
-      <div class="cc-platform" style="color:var(--gold);">LinkedIn · Sales Story</div>
-      <div class="cc-hook">"I generated $450K in 4 months selling pest control door-to-door. Here's the one thing that made the difference."</div>
-      <div class="cc-why">Proof + lesson. Founders and operators love this. Shows real sales foundation before the GTM pivot.</div>
-    </div>
-    <div class="content-card">
-      <div class="cc-platform" style="color:var(--gold);">LinkedIn · Operator Insight</div>
-      <div class="cc-hook">"I built a fake GTM pipeline with no company and no product. Here's what I learned in 30 days."</div>
-      <div class="cc-why">Learning-in-public content. Appeals to startup founders, GTM leads, and anyone building a team.</div>
-    </div>
-    <div class="content-card">
-      <div class="cc-platform" style="color:var(--gold);">LinkedIn · Women + Finance</div>
-      <div class="cc-hook">"Women control $30T in the U.S. economy. 70% say they feel unconfident about investing. I'm building the platform to close that gap."</div>
-      <div class="cc-why">Mission-driven content. Attracts investors, partners, collaborators, and the ICP directly.</div>
-    </div>
-  </div>
-
-  <h3 class="h3 mt28 rv">Newsletter: "The Owner's Brief"</h3>
-  <div class="card card-g rv">
-    <div class="grid g-2-1" style="gap:20px;">
-      <div>
-        <span class="lbl lb-g">Weekly Newsletter Concept</span>
-        <p style="font-size:13px;line-height:1.65;">One brand. One investing concept. One action step. Every Thursday. The goal: give a woman who's never invested one useful, accessible insight — through a brand she already knows and trusts.</p>
-        <p style="font-size:13px;line-height:1.65;"><strong>Sample issues:</strong></p>
-        <div style="display:flex;flex-direction:column;gap:7px;margin-top:6px;">
-          <div style="padding:9px 12px;background:var(--warm);border-radius:7px;font-size:12px;"><strong>Issue #1:</strong> "Why Starbucks issuing bonds is actually good for you as a small investor"</div>
-          <div style="padding:9px 12px;background:var(--warm);border-radius:7px;font-size:12px;"><strong>Issue #2:</strong> "Lululemon's stock vs. their leggings — which one should you buy?"</div>
-          <div style="padding:9px 12px;background:var(--warm);border-radius:7px;font-size:12px;"><strong>Issue #3:</strong> "What the Fed raising rates has to do with your Sephora haul"</div>
-          <div style="padding:9px 12px;background:var(--warm);border-radius:7px;font-size:12px;"><strong>Issue #4:</strong> "The Ulta Beauty business model — and why it matters to investors"</div>
-        </div>
+      <div class="quote mb24" style="margin-bottom:24px;">
+        <p>"Women don't need more conferences with name tags. They need more rooms where they can speak honestly — and leave with something real."</p>
       </div>
-      <div>
-        <span class="lbl lb-r">Metrics I'm Tracking</span>
-        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
-          <div style="text-align:center;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--ink-20);">
-            <div style="font-family:'Fraunces',serif;font-size:26px;color:var(--gold);">50%+</div>
-            <div style="font-size:10px;color:var(--mist);">Target open rate</div>
-          </div>
-          <div style="text-align:center;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--ink-20);">
-            <div style="font-family:'Fraunces',serif;font-size:26px;color:var(--sage);">500</div>
-            <div style="font-size:10px;color:var(--mist);">Subscribers by Day 90</div>
-          </div>
-          <div style="text-align:center;padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--ink-20);">
-            <div style="font-family:'Fraunces',serif;font-size:26px;color:var(--rose);">8%</div>
-            <div style="font-size:10px;color:var(--mist);">Click-through rate target</div>
-          </div>
+      <p>Polished is the community layer underneath From Consumer to Owner. It's where women founders, operators, and builders come together in Venice and beyond — not to network, but to actually build alongside each other.</p>
+      <p>The format is intimate: 12–20 women, a guided conversation, warm introductions from the host, and one real follow-up action per attendee. No pitch decks. No panels. Just women doing the work, together.</p>
+      <p>This is also GTM proof — building community IS the go-to-market motion for modern startups. Every event is lead generation, trust building, and distribution simultaneously.</p>
+
+      <div class="grid g2" style="gap:10px;margin-top:20px;">
+        <div style="padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--border);">
+          <span class="lbl lb-s">Event Format</span>
+          <ul style="list-style:none;font-size:12px;display:flex;flex-direction:column;gap:4px;color:var(--mist);">
+            <li>✦ Intimate: 12–20 women max</li>
+            <li>✦ Themed real conversation</li>
+            <li>✦ Warm intro for each attendee</li>
+            <li>✦ 1 action item per person</li>
+          </ul>
+        </div>
+        <div style="padding:14px;background:var(--white);border-radius:10px;border:1px solid var(--border);">
+          <span class="lbl lb-r">Event Topics</span>
+          <ul style="list-style:none;font-size:12px;display:flex;flex-direction:column;gap:4px;color:var(--mist);">
+            <li>✦ Revenue before funding</li>
+            <li>✦ Women + money + ownership</li>
+            <li>✦ Building your first pipeline</li>
+            <li>✦ GTM for non-technical founders</li>
+          </ul>
         </div>
       </div>
     </div>
+
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div class="card card-s">
+        <span class="lbl lb-s">Why Polished Exists</span>
+        <p style="font-size:13px;line-height:1.65;">Women in the workforce are navigating systems that weren't built for them — with less support from other women than there should be, and without the infrastructure men take for granted. Polished is the infrastructure.</p>
+      </div>
+      <div class="card">
+        <span class="lbl lb-g">Location</span>
+        <p style="font-size:13px;line-height:1.65;">Venice, CA · Starting local, growing digital. The LA ecosystem — Santa Monica, Culver City, Venice — has the density of women founders and operators to make this real from day one.</p>
+      </div>
+      <div class="card card-r">
+        <span class="lbl lb-r">Partnership Strategy</span>
+        <p style="font-size:13px;line-height:1.65;">Co-hosting with women-owned businesses, female-founded brands, and women's coworking spaces. Real partnership = mutual value, not just a logo.</p>
+      </div>
+    </div>
   </div>
+</div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   09 · SYSTEMS + TOOLS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   SYSTEMS
+━━━━━━━━━━━━━━━━━━━━━━━ -->
 <section class="sec" id="systems">
+<div class="sec-inner">
   <div class="sec-head rv">
-    <div class="sec-eyebrow se-s">09 · Systems + Tools</div>
-    <h2 class="sec-title">The infrastructure<br>behind the motion.</h2>
-    <p class="sec-desc">CRM structures, lead gen setups, outreach sequences, and automation maps. This is the operator layer I'm actively building.</p>
+    <div class="ey ey-m">Systems + Tools</div>
+    <h2 class="sec-title">The infrastructure<br>behind everything.</h2>
+    <p class="sec-desc">Every system I'm building — mapped, tooled, and documented. This is the operator layer.</p>
   </div>
 
   <div class="grid g3 sg">
-    <div class="proj-card">
-      <div class="proj-thumb pt-rose"><span>🎯</span><div class="proj-thumb-num">01</div></div>
+    <div class="proj">
+      <div class="proj-thumb pt-r"><span>🗺️</span><div class="proj-thumb-n">01</div></div>
       <div class="proj-body">
-        <div class="proj-title">HubSpot CRM Setup</div>
-        <div class="proj-sub">7-stage lifecycle pipeline. Custom contact properties. Auto-tag by source, brand preference, and engagement score. Connected to Zapier for automation triggers.</div>
-        <div class="tags"><span class="pill ps">HubSpot</span><span class="pill pt">Zapier</span><span class="pill pm">Airtable backup</span></div>
-        <div class="proj-meta">
-          <div class="proj-status ps-build">In Progress</div>
-          <span class="pill pg">GTM Infrastructure</span>
-        </div>
+        <div class="proj-title">GTM Visual OS</div>
+        <div class="proj-sub">Master system map, user journey, tech stack, ecosystem map, and investor overview — all visualized as a startup operating system.</div>
+        <div class="proj-foot"><div class="proj-status ps-live">Built</div><span class="pill pg">Visual Strategy</span></div>
       </div>
     </div>
-
-```
-<div class="proj-card">
-  <div class="proj-thumb pt-gold"><span>📣</span><div class="proj-thumb-num">02</div></div>
-  <div class="proj-body">
-    <div class="proj-title">Lead Gen Stack</div>
-    <div class="proj-sub">Apollo.io for ICP list building. LinkedIn Sales Nav filters for female founders and operators. Typeform waitlist connected to HubSpot. UTM tracking on all sources.</div>
-    <div class="tags"><span class="pill pg">Apollo.io</span><span class="pill pm">LinkedIn</span><span class="pill pr">Typeform</span></div>
-    <div class="proj-meta">
-      <div class="proj-status ps-live">Active</div>
-      <span class="pill ps">Lead Generation</span>
+    <div class="proj">
+      <div class="proj-thumb pt-g"><span>📋</span><div class="proj-thumb-n">02</div></div>
+      <div class="proj-body">
+        <div class="proj-title">Founding GTM Playbook</div>
+        <div class="proj-sub">10-section operating manual with scripts, daily rhythms, CRM stages, outreach sequences, and 30/60/90 plan. Built to actually use.</div>
+        <div class="proj-foot"><div class="proj-status ps-live">Built</div><span class="pill pr">Playbook</span></div>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="proj-thumb pt-s"><span>📊</span><div class="proj-thumb-n">03</div></div>
+      <div class="proj-body">
+        <div class="proj-title">Modern GTM Plan 2026</div>
+        <div class="proj-sub">9-section visual strategy document — vision, ICP, positioning, distribution, funnel, stack, and metrics. Built for external sharing.</div>
+        <div class="proj-foot"><div class="proj-status ps-live">Built</div><span class="pill ps">Strategy Doc</span></div>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="proj-card">
-  <div class="proj-thumb pt-sage"><span>✉️</span><div class="proj-thumb-num">03</div></div>
-  <div class="proj-body">
-    <div class="proj-title">Outreach Sequences</div>
-    <div class="proj-sub">3-step cold email sequence in Instantly. A/B testing subject lines. 5-email welcome drip in Klaviyo. Partnership outreach tracked manually in HubSpot notes.</div>
-    <div class="tags"><span class="pill ps">Instantly</span><span class="pill pt">Klaviyo</span><span class="pill pm">Lemlist</span></div>
-    <div class="proj-meta">
-      <div class="proj-status ps-build">Building</div>
-      <span class="pill pr">Outreach</span>
-    </div>
-  </div>
-</div>
-
-<div class="proj-card">
-  <div class="proj-thumb pt-teal"><span>⚡</span><div class="proj-thumb-num">04</div></div>
-  <div class="proj-body">
-    <div class="proj-title">Zapier Automation Map</div>
-    <div class="proj-sub">Typeform → HubSpot contact created → Klaviyo welcome sequence triggered. Payment → community invite → CRM lifecycle updated. Form → Slack notification to founder.</div>
-    <div class="tags"><span class="pill pt">Zapier</span><span class="pill ps">Make</span><span class="pill pm">HubSpot</span></div>
-    <div class="proj-meta">
-      <div class="proj-status ps-build">In Progress</div>
-      <span class="pill pg">Automation</span>
-    </div>
-  </div>
-</div>
-
-<div class="proj-card">
-  <div class="proj-thumb pt-ink"><span>📊</span><div class="proj-thumb-num">05</div></div>
-  <div class="proj-body">
-    <div class="proj-title">GTM Dashboard (Notion)</div>
-    <div class="proj-sub">Weekly metrics tracking. Content performance. Waitlist growth by source. Outreach reply rates. Interview insights log. Daily task board with GTM rhythm built in.</div>
-    <div class="tags"><span class="pill pm">Notion</span><span class="pill pg">GA4</span><span class="pill pt">Mixpanel</span></div>
-    <div class="proj-meta">
-      <div class="proj-status ps-live">Active</div>
-      <span class="pill ps">Analytics</span>
-    </div>
-  </div>
-</div>
-
-<div class="proj-card">
-  <div class="proj-thumb pt-warm"><span>🤖</span><div class="proj-thumb-num">06</div></div>
-  <div class="proj-body">
-    <div class="proj-title">AI Workflow Layer</div>
-    <div class="proj-sub">Claude for GTM strategy and copy drafting. GPT-4o for content research and personalization. Midjourney for visual assets. Descript for content editing and repurposing.</div>
-    <div class="tags"><span class="pill pr">Claude AI</span><span class="pill pg">GPT-4o</span><span class="pill pm">Descript</span></div>
-    <div class="proj-meta">
-      <div class="proj-status ps-live">Active</div>
-      <span class="pill pt">AI Tools</span>
-    </div>
-  </div>
-</div>
-```
-
-  </div>
-
-  <div class="ornament mt40"><span>✦</span></div>
-
-  <h3 class="h3 rv">What I Still Need to Create</h3>
-  <p style="color:var(--mist);font-size:13px;margin-bottom:20px;" class="rv">These are the artifacts I'm actively building to complete this portfolio. Transparency is proof of self-awareness and ambition.</p>
-  <div class="grid g2 rv">
-    <div style="display:flex;flex-direction:column;gap:8px;">
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">A/B test results from cold email experiments</div><div class="ni-desc">Real open rates, reply rates, and learnings from outreach sequences I've run</div></div></div>
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">Recorded user interview (30 min)</div><div class="ni-desc">A real conversation with a target user for From Consumer to Owner — documented insight</div></div></div>
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">First 3 newsletter issues published</div><div class="ni-desc">"The Owner's Brief" — live on Beehiiv with screenshot proof and metrics</div></div></div>
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">TikTok content series (5 videos minimum)</div><div class="ni-desc">Published brand-to-investing concept videos with view metrics attached</div></div></div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:8px;">
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">Waitlist page live (Webflow or Framer)</div><div class="ni-desc">Real live landing page with real email captures from real people</div></div></div>
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">ConnectHer event recap post</div><div class="ni-desc">Documentation of at least 1 real community event — attendees, photos, learnings</div></div></div>
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">Updated LinkedIn with GTM narrative</div><div class="ni-desc">LinkedIn profile rewritten to tell the full story: D2D → systems thinker → founder</div></div></div>
-      <div class="need-item"><div class="ni-check"></div><div><div class="ni-title">Video walkthrough of this portfolio</div><div class="ni-desc">2-min Loom walking a hiring manager through the key sections — adds human layer</div></div></div>
-    </div>
-  </div>
 </section>
 
-<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   10 · CONTACT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-<div class="sec-dark" id="contact">
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━
+   CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec-dark" id="contact">
 <div class="sec-inner">
   <div class="sec-head rv">
-    <div class="sec-eyebrow se-w">10 · Contact + Opportunities</div>
-    <h2 class="sec-title sec-title-w">Let's build<br>something together.</h2>
-    <p class="sec-desc" style="color:rgba(255,255,255,.5);">I'm actively looking for roles where I can close deals, build systems, and grow with a team that moves fast and builds real things.</p>
+    <div class="ey ey-w">Contact + Opportunities</div>
+    <h2 class="sec-title sec-title-w">Let's build<br>something real.</h2>
+    <p class="sec-desc" style="color:rgba(255,255,255,.5);">Open to the right startup role, the right accelerator, and the right investor. If you're building something that matters — let's talk.</p>
   </div>
 
   <div class="grid g-2-1 rv">
     <div>
-      <h3 class="h3 h3-w">Roles I'm Aligned With</h3>
+      <h3 class="h3 h3-w" style="margin-top:0;">What I'm Open To</h3>
       <div class="grid g2" style="gap:10px;margin-bottom:24px;">
         <div style="padding:14px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.08);">
-          <div style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-l);margin-bottom:5px;font-weight:600;">GTM</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.65);display:flex;flex-direction:column;gap:3px;">
-            <div>GTM Operator / Manager</div>
-            <div>Growth Associate</div>
-            <div>Revenue Operations</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-l);margin-bottom:5px;font-weight:600;">Hire Me</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.6);display:flex;flex-direction:column;gap:3px;">
+            <div>GTM Operator / Manager</div><div>Founding AE / SDR</div>
+            <div>Partnerships Manager</div><div>Founder's Associate</div>
           </div>
         </div>
         <div style="padding:14px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.08);">
-          <div style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose-l);margin-bottom:5px;font-weight:600;">Sales</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.65);display:flex;flex-direction:column;gap:3px;">
-            <div>SDR / BDR (SaaS)</div>
-            <div>Account Executive</div>
-            <div>Partnerships Manager</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose-l);margin-bottom:5px;font-weight:600;">Back Me</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.6);display:flex;flex-direction:column;gap:3px;">
+            <div>YC / All Raise / Backstage</div><div>Female Founders Fund</div>
+            <div>Pre-seed investors</div><div>Strategic advisors</div>
           </div>
         </div>
         <div style="padding:14px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.08);">
-          <div style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-l);margin-bottom:5px;font-weight:600;">Community</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.65);display:flex;flex-direction:column;gap:3px;">
-            <div>Community Manager</div>
-            <div>Events + Partnerships</div>
-            <div>Developer Relations</div>
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--sage-l);margin-bottom:5px;font-weight:600;">Join Me</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.6);display:flex;flex-direction:column;gap:3px;">
+            <div>Polished community</div><div>Co-host an event</div>
+            <div>Brand partnerships</div><div>Creator collabs</div>
           </div>
         </div>
-        <div style="padding:14px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.08);">
-          <div style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:5px;font-weight:600;">Operator</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.65);display:flex;flex-direction:column;gap:3px;">
-            <div>Recruiting / Talent</div>
-            <div>Founder's Associate</div>
-            <div>Chief of Staff (startup)</div>
+        <div style="padding:14px;background:rgba(184,128,48,.1);border-radius:10px;border:1px solid rgba(184,128,48,.25);">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-l);margin-bottom:5px;font-weight:600;">Location</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.6);display:flex;flex-direction:column;gap:3px;">
+            <div>Venice, CA</div><div>Open to hybrid/remote</div><div>Will travel for the right opportunity</div>
           </div>
         </div>
       </div>
+    </div>
 
-```
-  <h3 class="h3 h3-w">Collaboration Opportunities</h3>
-  <div style="display:flex;flex-direction:column;gap:8px;">
-    <div style="padding:12px 16px;background:rgba(255,255,255,.04);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;color:rgba(255,255,255,.65);">Co-host a workshop or panel for women in business / finance</div>
-    <div style="padding:12px 16px;background:rgba(255,255,255,.04);border-radius:9px;border-left:3px solid var(--rose);font-size:13px;color:rgba(255,255,255,.65);">Partnership for From Consumer to Owner (creator, brand, community)</div>
-    <div style="padding:12px 16px;background:rgba(255,255,255,.04);border-radius:9px;border-left:3px solid var(--sage);font-size:13px;color:rgba(255,255,255,.65);">GTM mentorship or feedback from operators and founders</div>
-    <div style="padding:12px 16px;background:rgba(255,255,255,.04);border-radius:9px;border-left:3px solid var(--teal);font-size:13px;color:rgba(255,255,255,.65);">Connect on building women-focused business infrastructure</div>
-  </div>
-</div>
-
-<div style="display:flex;flex-direction:column;gap:10px;">
-  <a href="mailto:hello@yourname.com" class="contact-link">
-    <div class="cl-icon">✉️</div>
-    <div><div class="cl-label">Email</div><div class="cl-value">hello@yourname.com</div></div>
-  </a>
-  <a href="https://linkedin.com/in/yourname" class="contact-link">
-    <div class="cl-icon">💼</div>
-    <div><div class="cl-label">LinkedIn</div><div class="cl-value">linkedin.com/in/yourname</div></div>
-  </a>
-  <a href="#" class="contact-link">
-    <div class="cl-icon">📄</div>
-    <div><div class="cl-label">Resume</div><div class="cl-value">Download PDF →</div></div>
-  </a>
-  <a href="https://tiktok.com/@yourhandle" class="contact-link">
-    <div class="cl-icon">📱</div>
-    <div><div class="cl-label">TikTok</div><div class="cl-value">@yourhandle</div></div>
-  </a>
-  <a href="#" class="contact-link">
-    <div class="cl-icon">🌐</div>
-    <div><div class="cl-label">Newsletter</div><div class="cl-value">The Owner's Brief → Subscribe</div></div>
-  </a>
-
-  <div style="margin-top:10px;padding:20px;background:rgba(184,136,50,.1);border:1px solid rgba(184,136,50,.25);border-radius:12px;">
-    <div style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);margin-bottom:8px;font-weight:600;">Availability</div>
-    <p style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin:0;">Open to full-time roles, contract-to-hire, and project-based collaborations. Available immediately. Willing to travel for the right opportunity.</p>
-  </div>
-</div>
-```
-
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="mailto:jessicaevelynhak@gmail.com" class="contact-link">
+        <div class="cl-icon">✉️</div>
+        <div><div class="cl-lbl">Email</div><div class="cl-val">jessicaevelynhak@gmail.com</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/jessicahak" class="contact-link">
+        <div class="cl-icon">💼</div>
+        <div><div class="cl-lbl">LinkedIn</div><div class="cl-val">linkedin.com/in/jessicahak</div></div>
+      </a>
+      <a href="https://www.tiktok.com/@fromconsumertoowner" class="contact-link">
+        <div class="cl-icon">📱</div>
+        <div><div class="cl-lbl">TikTok</div><div class="cl-val">@fromconsumertoowner</div></div>
+      </a>
+      <div style="margin-top:8px;padding:18px 20px;background:rgba(184,128,48,.1);border:1px solid rgba(184,128,48,.25);border-radius:12px;">
+        <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);margin-bottom:6px;font-weight:600;">Dream Outcome</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin:0;">Build and sell a company. The kind that changes how women think about money, ownership, and what they're worth.</p>
+      </div>
+    </div>
   </div>
 
-  <!-- Footer -->
-
-  <div style="margin-top:60px;padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;" class="rv">
-    <div style="font-family:'Fraunces',serif;font-size:20px;color:rgba(255,255,255,.3);font-weight:300;">GTM Operator · Portfolio · 2026</div>
+  <div style="margin-top:60px;padding-top:28px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;" class="rv">
+    <div style="font-family:'Fraunces',serif;font-size:18px;color:rgba(255,255,255,.3);font-weight:300;">Jessica Evelyn Hak · Venice, CA · 2026</div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;">
       <span class="pill pw">Sales Proved</span>
       <span class="pill pw">Systems Building</span>
-      <span class="pill pw">Founder Thinking</span>
+      <span class="pill pw">Founder Mode</span>
       <span class="pill pw">Community Growing</span>
     </div>
   </div>
 </div>
-</div>
+</section>
 
 <script>
-// ── Reveal on scroll ──
 const io = new IntersectionObserver(e=>{
   e.forEach(x=>{ if(x.isIntersecting) x.target.classList.add('on'); });
 },{ threshold:.06, rootMargin:'0px 0px -30px 0px' });
 
 document.querySelectorAll('.rv,.sg').forEach(el=>io.observe(el));
 
-// ── Active nav ──
-const secs = document.querySelectorAll('section[id], [id]');
+const secs = document.querySelectorAll('section[id],[id]');
 const links = document.querySelectorAll('.nav-links a[href^="#"]');
 
 const sio = new IntersectionObserver(e=>{
   e.forEach(x=>{
     if(x.isIntersecting){
-      links.forEach(l=>{ l.style.color=''; l.style.background=''; });
-      const a = document.querySelector(`.nav-links a[href="#${x.target.id}"]`);
-      if(a && !a.classList.contains('nav-cta')){
-        a.style.color='var(--ink)';
-        a.style.background='var(--warm)';
+      links.forEach(l=>{l.style.color='';l.style.background='';});
+      const a=document.querySelector(`.nav-links a[href="#${x.target.id}"]`);
+      if(a&&!a.classList.contains('nav-cta')){
+        a.style.color='rgba(255,255,255,.8)';
+        a.style.background='rgba(255,255,255,.07)';
       }
     }
   });
 },{ threshold:.3 });
 
-document.querySelectorAll('#home,#about,#sales,#gtm,#cto,#community,#outreach,#content,#systems,#contact')
+document.querySelectorAll('#home,#origin,#sales,#cto,#gtm,#polished,#systems,#contact')
   .forEach(s=>sio.observe(s));
 
-// ── Smooth scroll ──
 links.forEach(a=>{
   a.addEventListener('click',e=>{
     e.preventDefault();
-    const t = document.querySelector(a.getAttribute('href'));
+    const t=document.querySelector(a.getAttribute('href'));
     if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
   });
 });
-
-// ── Tagline selection ──
-document.querySelectorAll('.tagline-option').forEach(el=>{
-  el.addEventListener('click',()=>{
-    document.querySelectorAll('.tagline-option').forEach(x=>x.classList.remove('active'));
-    el.classList.add('active');
-  });
-});
 </script>
-
 </body>
 </html>
